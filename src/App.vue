@@ -1,0 +1,32 @@
+<template>
+  <NavBar></NavBar>
+  <!-- <img alt="Vue logo" src="./assets/images/orangeDolphin.png"> -->
+  <router-view></router-view>
+  <Footer></Footer>
+</template>
+
+<script>
+import NavBar from './components/NavBar.vue'
+import Footer from './components/PageFooter.vue'
+
+export default {
+  name: 'App',
+  components: {
+    NavBar,
+    Footer
+  }
+}
+</script>
+
+<style>
+#app {
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+</style>
