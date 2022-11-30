@@ -1,5 +1,5 @@
 <template>
-    <div class="text-muted bg-light bg-gradient" id="pageFooter">
+    <div class="text-muted bg-light bg-gradient mt-5" id="pageFooter">
       COPYRIGHT &#169; Orange Dolphin 2023 <br> Designed and developed by Aloysius & Arthur
     </div>
 </template>
@@ -10,7 +10,6 @@ export default {
 </script>
 <style>
 #pageFooter{
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;

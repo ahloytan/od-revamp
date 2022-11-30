@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
-    // {
-    //     path: '/',
-    //     name: 'Home',
-    //     component: () => import('../views/Navbar.vue'),
-    //     meta: {
-    //         title: 'Home',
-    //     },
-    // },
+    {
+        path: '/home-page',
+        name: 'Home',
+        component: () => import('../views/home-page.vue'),
+        meta: {
+            title: 'Home',
+        },
+    },
     {
         path: '/about-us',
         name: 'About Us',
