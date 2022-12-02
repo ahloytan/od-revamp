@@ -2,11 +2,7 @@
     <div id="aboutUs">
         <div class="container">
             <div class="row">
-                <h1 class="mt-5">OD's Story</h1>
-                <p class="text-start">Who are we?</p>
-                <p class="text-start">We started from a non-profit society formed in 2012 and officially registered in 2017. We started the society because we believe everyone deserved to grow. When we give wellness to ourselves, growth will become natural. We believe in giving and growing together.</p>
-                <p class="text-start">In 2019, there is a opportunity for us to take a step forward to share what has worked as we started to build our activities based on our ORANGE framework together with mindfulness. We started a company to sustain our non-profit society so that we can grow and share our program with more people and hopefully they will find it beneficial and join our community.</p>
-                <h1>Timeline</h1>
+                <h1 class="mt-5 blue">Timeline</h1>
                 <Timeline :value="events" align="alternate" class="customized-timeline">
                     <template #marker="slotProps">
                         <span class="custom-marker p-shadow-2" :style="{backgroundColor: slotProps.item.color}">
@@ -30,6 +26,12 @@
                         </Card>
                     </template>
                 </Timeline>
+                <h1 class="mt-5 blue">Orange Dolphin's Story</h1>
+            </div>
+        </div>
+        <div class="bg-light bg-gradient">
+            <div class="container py-3">
+                <p v-for="(paragraph, index) in paragraphs" :key="index" class="text-start fs-5">{{paragraph}}</p>
             </div>
         </div>
     </div>
@@ -57,6 +59,14 @@ export default {
                 {status: 'Shipped', date: '15/10/2020 16:15', icon: 'pi pi-shopping-cart', color: '#FF9800'},
                 {status: 'Delivered', date: '16/10/2020 10:00', icon: 'pi pi-check', color: '#607D8B'}
             ],
+            paragraphs: [
+                "There once was a dolphin who was injured.",
+                "Instead of fellow dolphins ignoring the injured dolphin and leaving it alone to fend itself, a school of dolphins began to swim around the dolphin. This ensured that the dolphin was protected from predators while recovering as the injury would have placed it in a vulnerable state. As the days went by, the injured dolphin finally recovered. ", 
+                "Eventually, the moment came when the recovered dolphin instead, becomes a guarding angel for other dolphins that needed help. The school of dolphins leap in joy at the end of the day, basking in the sunset & the orange sun rays. The culture of giving and growing continues.", 
+                "This is how the culture started in 2009 which eventually was known as Orange Dolphin in 2012. We wanted to provide assistance to people who needed help – to those that wanted to help themselves, but lacked the necessary resources to do so.", 
+                "Dolphins are similar to humans in many ways – not only are they smart mammals, they operate in a group as well. This is extremely similar to human reliance on each other, where interaction is close to inevitable. Dolphins are undoubtedly grateful individuals that look after one another in a united community.",
+                " At the end of the day, the dolphins leap in joy, basking in ORANGE – sun rays radiating the values of Open, Reflective, Adventurous to accept, Never give up, Genuine in giving and Enthusiastic to embrace."
+            ]
         }
     },
     methods: {
@@ -66,7 +76,10 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
+.blue{
+    color: $od-blue;
+}
 .custom-marker{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -87,7 +100,32 @@ export default {
 .p-card{
     background: #ffffff;
     color: #495057;
-    box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,0.15), 0 1px 1px 0 rgba(0,0,0,0.15), 0 1px 3px 0 rgba(0,0,0,0.15);
     border-radius: 6px;
+}
+
+::v-deep(.p-timeline-event-content),
+::v-deep(.p-timeline-event-opposite) {
+    line-height: 1;
+}
+
+@media screen and (max-width: 960px) {
+    ::v-deep(.customized-timeline) {
+        .p-timeline-event:nth-child(even) {
+            flex-direction: row !important;
+            
+            .p-timeline-event-content {
+                text-align: left !important;
+            }
+        }
+
+        .p-timeline-event-opposite {
+            flex: 0;
+        }
+
+        .p-card {
+            margin-top: 1rem;
+        }
+    }
 }
 </style>

@@ -1,56 +1,66 @@
 <template>
     <div id="homePage">
         <div class="container">
-            <div class="row">
-                <div id="carouselExampleDark" class="carousel carousel-dark slide mt-5" data-bs-ride="carousel" data-bs-interval="3000">
-                    <div class="carousel-indicators">
-                        <button :id="'btn' + image" v-for="(image, index) in images" :key="image+index" type="button" class="" data-bs-target="#carouselExampleDark" :data-bs-slide-to="index" aria-current="true" :aria-label="'Slide' + index "></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div :id="image" v-for="image in images" :key="image" class="carousel-item">
-                            <img :src="getImage(image)" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+            <div v-for="(text, index) in texts" :key="index" class="row mt-5">
+                <h1 class="mvv">{{textsHeader[index]}}</h1>
+                <div class="fs-5">{{text}}</div>
+            </div>
+            <div class="row mt-5">
+                <h1 class="mvv">VALUES</h1>
+                <div> 
+                    <span v-for="(value) in values" :key="value">
+                        <span class="glow fs-2">{{value.charAt(0)}}</span>
+                        <span class="fs-5">{{value.substring(1, value.length)}}&nbsp;</span>
+                    </span>
                 </div>
             </div>
         </div>
+        <theCarousel></theCarousel>
     </div>
 </template>
 <script>
+import theCarousel from "../components/Carousel.vue";
 
 export default {
-  name: 'HomePage',
-  components: {
-  },
-  data(){
-    return {
-        images: ['c1', 'c2', 'c3', 'c4', 'c5', 'c6']
-    }
-  },
-  mounted(){
-    document.getElementById('c1').classList.add('active');
-    document.getElementById('btnc1').classList.add('active');
-  },
-  methods: {
-        getImage(imagePath) {
-            return require("@/assets/carousel/" + imagePath + ".jpg");
+    name: 'HomePage',
+    components: {
+        theCarousel
+    },
+    data(){
+        return {
+            textsHeader: ["VISION", "MISSION"],
+            texts: [
+                "Orange Dolphin, OD, was formed in 2012 and officially registered as a society in 2017. It is a community of people (dolphins) who wanted to pay it forward and has a belief in \"giving is growing\". We hope to help every young to fulfil their potential by coaching, mentoring, and volunteering.", 
+                "To grow grateful and resilience young through the mentoring network"
+            ],
+            values: ["Open | ", "Reflective | ", "Adventurous | ", "Never give up | ", "Genuine | ", "Enthusiastic"],
+            carouselLoadedOnce: false
         }
+    },
+    mounted(){
+
+    },
+    methods: {
     }
 }
 
 </script>
-<style>
+<style scoped lang="scss">
+.mvv{
+    color: $od-blue;
+}
 
+.glow{
+  margin-top:45vh;
+  color: $od-red;
+  animation-name:glow;
+  animation-duration:1s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:0px 0px 5px #fff,0px 0px 5px $od-red;}
+  to{text-shadow:0px 0px 20px #fff,0px 0px 20px $od-red;}
+}
 </style>

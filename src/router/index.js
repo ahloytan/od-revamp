@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
     {
-        path: '/home-page',
+        path: '/',
         name: 'Home',
         component: () => import('../views/home-page.vue'),
         meta: {
@@ -15,6 +15,46 @@ const routes = [
         component: () => import('../views/about-us.vue'),
         meta: {
             title: 'About Us',
+        },
+    },
+    {
+        path: '/society-page',
+        name: 'Society',
+        component: () => import('../views/society-page.vue'),
+        meta: {
+            title: 'Society',
+        },
+    },
+    {
+        path: '/education-page',
+        name: 'Education',
+        component: () => import('../views/education-page.vue'),
+        meta: {
+            title: 'Education',
+        },
+    },
+    {
+        path: '/testimonials-page',
+        name: 'Testimonials',
+        component: () => import('../views/testimonials-page.vue'),
+        meta: {
+            title: 'Testimonials',
+        },
+    },
+    {
+        path: '/coaching-page',
+        name: 'Coaching',
+        component: () => import('../views/coaching-page.vue'),
+        meta: {
+            title: 'Coaching',
+        },
+    },
+    {
+        path: '/contact-us',
+        name: 'Contact Us',
+        component: () => import('../views/contact-us.vue'),
+        meta: {
+            title: 'Contact Us',
         },
     },
     {
@@ -41,21 +81,8 @@ const router = createRouter({
     routes
 })
 
-// router.beforeEach(async (to, _from, next) => {
-//     if (to.matched.some(record => record.meta.atLeast1LJ)) {
-//         to.query.learningJourneyID ? next() : next({path: '/learningJourney'});
-//     }
-
-//     if (to.matched.some(record => record.meta.requiresAuth)) {
-//       sessionStorage.getItem("role") ? next() : next({ path: '/', });
-
-//     } else if (to.matched.some(record => record.meta.isAuth)) {
-//       sessionStorage.getItem("role") ? next({path: '/learningJourney'}) : next();
-
-//     } else {
-//       next();
-
-//     }
-//   });
+router.beforeEach(async (to, _from, next) => {
+    to.name == "NotFound" ? next({path: '/'}) : next();
+});
 
 export default router
