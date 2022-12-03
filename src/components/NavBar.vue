@@ -25,15 +25,15 @@ export default {
 
   data(){
     return {
-        active: null,
+        active: "/",
         pages: ['/', 'about-us', 'society-page', 'education-page', 'testimonials-page', 'coaching-page', 'contact-us'],
         pagesName: ['Home', 'About Us', 'Society', 'Education', 'Testimonials', 'Coaching', 'Contact Us']
     }
   },
   mounted(){
-    const path = this.$route.path;
-    console.log(this.$route);  
-    this.active = path == "/" ? "/" : path.substring(1, path.length);
+    let path = window.location.href.split("/");
+    let endPage = path[path.length - 1];
+    this.active = endPage ? endPage : "/";
   },
   methods:{
   }
