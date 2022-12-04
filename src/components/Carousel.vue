@@ -13,7 +13,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div :id="image" v-for="image in images" :key="image" class="carousel-item">
-                        <img :src="getImage(image)" class="d-block w-100" :alt="image">
+                        <img :src="getImage(image)" class="img-fluid d-block w-100" :alt="image">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
