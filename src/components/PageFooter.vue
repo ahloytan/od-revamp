@@ -5,7 +5,7 @@
         <a target="_blank" href="https://www.instagram.com/ahloytan/?hl=en"><img class="icons" src="@/assets/icons/instagram.png"></a>
         <a target="_blank" href="https://sg.linkedin.com/in/jerry-seah-86518281"><img class="icons" src="@/assets/icons/linkedin.png"></a>
       </div>
-      <div id="header" class="text-center w-100 px-3 fs-2">Giving and Growing Since 2012</div>
+      <div id="header" class="text-center w-100 px-3 fs-extra-large">Giving and Growing Since 2012</div>
       <div>COPYRIGHT &#169; Orange Dolphin 2023</div>
     </div>
 </template>
@@ -33,5 +33,13 @@ export default {
   width: 32px;
   height: 32px;
   margin: 0 20px;
+}
+
+.fs-extra-large{
+  font-size: $fs-xs;
+
+  @include breakpoint(tablet){
+    font-size: $fs-xl;
+  }
 }
 </style>

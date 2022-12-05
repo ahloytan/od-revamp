@@ -35,19 +35,20 @@ export default {
     name: 'theCarousel',
     data(){
         return {
+            timer: null,
             startIndex: 1,
-            isDesktop: true,
+            isDesktop: null,
             images: ['c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7'],
-            timer: null
         }
     },  
     mounted(){
         if (window.innerWidth < 990){ 
             this.isDesktop = false; 
-            $('#c1,#btnc1').addClass('active');
+            $('#c1, #btnc1').addClass('active');
+        } else {
+            this.isDesktop = true;
+            this.timer = setInterval(() => { this.rotate(); }, 3500);
         }
-
-        this.timer = setInterval(() => { this.rotate(); }, 3500)
     },
     methods:{
         rotate() {
