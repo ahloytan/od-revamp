@@ -1,36 +1,36 @@
 <template>
-    <div id="education">
-        <div class="container fs-small">
-            <div class="row">
-                <h1 class="blue mt-5" data-aos="flip-up">What Do We Offer?</h1>
-                <h5 class="text-muted">Hover to view more information!</h5>
-                <main class="page-content">
-                    <div class="card" v-for="card in cards" :key="card.title" :data-aos="card.animation">
-                        <div class="content">
-                          <h2 class="title">{{card.title}}</h2>
-                          <p class="copy">{{card.content}}</p>
-                          <a href="/contact-us"><button class="btn">Join Us Now!</button></a>
-                        </div>
-                    </div>
-                </main>
-            </div>
-            <div class="row">
-                <h1 class="blue" data-aos="flip-up">How We Work?</h1>
-                <div data-aos="slide-right">
-                  In terms of working with school, we are a young company who currently based our program at Assumption English School. We are helping AES to manage their students at risk through 1) Mentoring 2) Doing workshops for the group which teach them values. We also provide youth worker to take care of their weekly cabin activities
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
+  <div id="education">
+      <div class="container fs-small">
           <div class="row">
-            <h1 class="blue" data-aos="flip-up">Partnerships</h1>
-            <div class="col-lg-4 mt-4" v-for="partnership in partnerships" :key="partnership.title" :data-aos="partnership.animation">
-              <div class="fw-bold fs-medium">{{partnership.title}}</div>
-              <img :src="getImage(partnership.path)" class="img-fluid" :alt="partnership.path">
-            </div>
+              <h1 class="blue mt-5" data-aos="flip-up">What Do We Offer?</h1>
+              <h5 class="text-muted">Hover to view more information!</h5>
+              <main class="page-content">
+                  <div class="card" v-for="card in cards" :key="card.title" :data-aos="card.animation">
+                      <div class="content">
+                        <h2 class="title">{{card.title}}</h2>
+                        <p class="copy">{{card.content}}</p>
+                        <a href="/contact-us"><button class="btn">Join Us Now!</button></a>
+                      </div>
+                  </div>
+              </main>
+          </div>
+          <div class="row">
+              <h1 class="blue" data-aos="flip-up">How We Work?</h1>
+              <div data-aos="slide-right">
+                In terms of working with school, we are a young company who currently based our program at Assumption English School. We are helping AES to manage their students at risk through 1) Mentoring 2) Doing workshops for the group which teach them values. We also provide youth worker to take care of their weekly cabin activities
+              </div>
+          </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <h1 class="blue" data-aos="flip-up">Partnerships</h1>
+          <div class="col-lg-4 mt-4" v-for="partnership in partnerships" :key="partnership.title" :data-aos="partnership.animation">
+            <div class="fw-bold fs-medium">{{partnership.title}}</div>
+            <img :src="getImage(partnership.path)" class="img-fluid" :alt="partnership.path">
           </div>
         </div>
-    </div>
+      </div>
+  </div>
 </template>
 <script>
 export default{
@@ -40,7 +40,7 @@ export default{
           cards: [
             {title: "1. Begin anew with ORANGE", animation: "slide-right", content: "It is a program based on our ORANGE model and mindfulness. The purpose of these series of workshops is to help us to gain clarity so that we will respond with kindness, increased with our wellness. It is a model to help us manage ourselves better. Combined with mindfulness practice in the workshops, it will help us to be more resilience and grateful."},
             {title: "2. Mentor for Cabin", animation: "slide-up", content: "We provide mentor for school cabin for after school engagement program. The role of mentor is to develop student leaders and guide them to run the cabin. We believe in teaching the spirit of paying it forward so that we can build a community to sustain a good culture. We will help to build the eco system by encouraging and supporting student leaders to take up mentorship roles as the graduate from the cabin."},
-            {title: "3. Personalised programme for students at risk", animation: "slide-left", content: "Based on our experience of working with less advantage students from our time as a society, we have seen many successful examples. The continuity of Orange Dolphin till today is an evidence of the success stories who wanted to pay it forward. Our youth workers also have a heart for the at-risk students and have diversity of experience working with youth from voluntary welfare organisations. We believe in journeying with these group of students."}
+            {title: "3. Personalised programme for students at risk", animation: "slide-left", content: "We have seen many successful examples of working with less advantage students as a society. The continuity of Orange Dolphin is the evidence of these success stories who wanted to pay it forward. Our youth workers also have a heart for the at-risk students and have diversity of experience working with youths from voluntary welfare organisations. We believe in journeying with these group of students."}
           ],
           partnerships: [
             {title: "BEATTY SECONDARY SCHOOL", path: "beatty.jpg", animation: "fade-down-left"},

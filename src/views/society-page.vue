@@ -63,7 +63,7 @@
       <h1 class="blue" data-aos="zoom-in-left">Partnerships (Community Service)</h1>
       <div class="container">
         <div class="row fs-medium fw-bold">
-          <div class="col-4" v-for="community in communityServices" :key="community.name" :data-aos="community.animation">
+          <div class="col-lg-4" v-for="community in communityServices" :key="community.name" :data-aos="community.animation">
             <div>{{community.name}}</div>
             <img class="csImages" :src="getImage1(community.path)" :alt="community.name"> 
           </div>

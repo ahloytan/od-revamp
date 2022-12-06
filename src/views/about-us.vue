@@ -12,16 +12,14 @@
                     <template #content="slotProps">
                         <Card :data-aos="slotProps.item.animation" :data-aos-duration="animateSpeed">
                             <template #title>
-                                {{slotProps.item.status}}
+                                <span class="fs-large">{{slotProps.item.status}}</span>
                             </template>
                             <template #subtitle>
-                                {{slotProps.item.date}}
+                                <span class="fs-medium">{{slotProps.item.date}}</span>
                             </template>
                             <template #content>
-                                <img v-if="slotProps.item.image" :src="getImage(slotProps.item.image)" :alt="slotProps.item.name" width="200" class="p-shadow-2" />
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-                                    quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-                                <Button label="Read more" class="p-button-text"></Button>
+                                <img v-if="slotProps.item.image" :src="getImage(slotProps.item.image)" :alt="slotProps.item.name" class="timeline-img p-shadow-2" />
+                                <p class="mt-2 fs-small">{{slotProps.item.text}}</p>
                             </template>
                         </Card>
                     </template>
@@ -39,7 +37,6 @@
 <script>
 import Timeline from 'primevue/timeline';
 import Card from 'primevue/card';
-import Button from 'primevue/button';
 import 'primevue/resources/themes/saga-blue/theme.css';
 import 'primevue/resources/primevue.min.css'; 
 import 'primeicons/primeicons.css';
@@ -50,16 +47,18 @@ export default {
   components: {
     Timeline,
     Card,
-    Button
   },
   data() {
         return {
             animateSpeed: 500,
             events: [
-                {status: 'Ordered', date: '15/10/2020 10:30', icon: 'pi pi-shopping-cart', color: '#9C27B0', image: 'game-controller.jpg', animation: 'fade-down-right'},
-                {status: 'Processing', date: '15/10/2020 14:00', icon: 'pi pi-cog', color: '#673AB7', image: 'game-controller.jpg', animation: 'fade-down-left'},
-                {status: 'Shipped', date: '15/10/2020 16:15', icon: 'pi pi-shopping-cart', color: '#FF9800', image: 'game-controller.jpg', animation: 'fade-down-right'},
-                {status: 'Delivered', date: '16/10/2020 10:00', icon: 'pi pi-check', color: '#607D8B', image: 'game-controller.jpg', animation: 'fade-down-left'}
+                {status: 'Our First Volunteers', date: '15/10/2009', icon: 'pi pi-info-circle', color: '#9C27B0', image: '2009.jpg', animation: 'fade-down-right', text: 'Started with having a group of self-voluntary alumni that helps their junior on Saturdays at Bendemeer Secondary School (BDSS)'},
+                {status: 'Project Orange Dolphin', date: '15/10/2012', icon: 'pi pi-cog', color: '#673AB7', image: '2012.png', animation: 'fade-down-left', text: 'Officially form ourselves as a society with our first batch of Exco, named Project Orange Dolphin'},
+                {status: 'Partnership With GYSS', date: '15/10/2013', icon: 'pi pi-heart', color: '#FF9800', image: '2013.png', animation: 'fade-down-right', text: 'Expanded to Guangyang Secondary School (GYSS), exploring on organising other community service projects'},
+                {status: 'We Are Registered', date: '16/10/2017', icon: 'pi pi-id-card', color: '#607D8B', image: '2017.png', animation: 'fade-down-left', text: 'Officially registered as a society with Registry of Society (ROS). Ended our service with BDSS after 8 years.'},
+                {status: 'Partnership With BSS', date: '15/10/2018', icon: 'pi pi-megaphone', color: '#673AB7', image: '2018.png', animation: 'fade-down-left', text: 'Outreached to Beatty Secondary School and started Mindfulnessjourney by conducting mindfulness workshops'},
+                {status: 'Partnership With SMU', date: '15/10/2021', icon: 'pi pi-search-plus', color: '#FF9800', image: 'gyss.png', animation: 'fade-down-right', text: 'Started our 1st partnership with SMU'},
+                {status: 'Celebrating Our 10th Year Anniversary', date: '16/10/2022', icon: 'pi pi-thumbs-up', color: '#607D8B', image: '2022.png', animation: 'fade-down-left', text: 'Here we are! Celebrating our 10th year anniversary'},
             ],
             paragraphs: [
                 "There once was a dolphin who was injured.",
@@ -75,7 +74,7 @@ export default {
     },  
     methods: {
         getImage(imagePath) {
-            return require("@/assets/images/" + imagePath);
+            return require("@/assets/timeline/" + imagePath);
         }
     }
 }
@@ -90,8 +89,31 @@ export default {
     font-size: $fs-xs;
 
     @include breakpoint(tablet){
-        font-size: $fs-m;
+        font-size: $fs-s;
     }
+}
+
+.fs-medium{
+  font-size: $fs-s;
+
+  @include breakpoint(tablet){
+    font-size: $fs-m;
+  }
+}
+
+.fs-large{
+  font-size: $fs-m;
+
+  @include breakpoint(tablet){
+    font-size: $fs-l;
+  }
+}
+.timeline-img{
+    width: 200px;
+
+    @include breakpoint(tablet){
+        width: 400px;
+    }   
 }
 
 .custom-marker{

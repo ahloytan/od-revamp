@@ -1,9 +1,7 @@
 <template>
     <div class="text-muted mt-5" id="pageFooter">
       <div class="my-2 text-black">
-        <a target="_blank" href="https://www.facebook.com/OrangeDolphinSG/"><img class="icons" src="@/assets/icons/facebook.png"></a>
-        <a target="_blank" href="https://www.instagram.com/ahloytan/?hl=en"><img class="icons" src="@/assets/icons/instagram.png"></a>
-        <a target="_blank" href="https://sg.linkedin.com/in/jerry-seah-86518281"><img class="icons" src="@/assets/icons/linkedin.png"></a>
+        <a target="_blank" :href="link.href" v-for="link in links" :key="link.path"><img class="icons" :src="getImage(link.path)"></a>
       </div>
       <div id="header" class="text-center w-100 px-3 fs-extra-large">Giving and Growing Since 2012</div>
       <div>COPYRIGHT &#169; Orange Dolphin 2023</div>
@@ -12,6 +10,20 @@
 <script>
 export default {
   name: 'PageFooter',
+  data(){
+    return {
+      links: [
+        {href: "https://www.facebook.com/OrangeDolphinSG/", path: "facebook.png"},
+        {href: "https://www.instagram.com/ahloytan/?hl=en", path: "instagram.png"},
+        {href: "https://sg.linkedin.com/in/jerry-seah-86518281", path: "linkedin.png"}
+      ]
+    }
+  },
+  methods: {
+    getImage(imagePath) {
+      return require("@/assets/icons/" + imagePath);
+    }
+  }
 }
 </script>
 <style scoped lang="scss">

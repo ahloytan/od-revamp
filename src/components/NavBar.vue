@@ -9,7 +9,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-center">
-                        <li v-for="page in pages" :key="page.name" class="nav-item" @click="active = page.path; $router.push(page.path)">
+                        <li v-for="page in pages" :key="page.name" class="nav-item" @click="active = page.path; $router.push(page.path)" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                             <span :class="{active:active === page.path}" class="nav-link fs-5 fw-bold px-4">{{page.name}}</span>
                         </li>
                     </ul>
