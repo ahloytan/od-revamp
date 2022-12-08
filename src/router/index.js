@@ -26,6 +26,14 @@ const routes = [
         },
     },
     {
+        path: '/contact-us', 
+        name: 'Contact Us', 
+        component: () => import('../views/contact-us.vue'), 
+        meta: {
+            title: 'Contact Us',
+        }
+    },
+    {
         //https://stackoverflow.com/questions/63526486/vue-router-catch-all-wildcard-not-working
         path: '/:catchAll(.*)',
         name: 'NotFound',
