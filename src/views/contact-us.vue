@@ -27,7 +27,6 @@
                     <input v-model="interests[interest]" class="form-check-input" type="checkbox" value="" id="{{interest}}">
                     <label class="form-check-label" for="{{interest}}">
                         {{interest}}
-                        {{key}}
                     </label>
                     </div>
                 </div>
