@@ -3,7 +3,7 @@
       <div class="my-2 text-black">
         <a target="_blank" :href="link.href" v-for="link in links" :key="link.path"><img class="icons" :src="getImage(link.path)"></a>
       </div>
-      <div id="header" class="text-center w-100 px-3 fs-extra-large">Giving and Growing Since 2012</div>
+      <div id="header" class="text-center w-100 px-3 fs-small">Giving and Growing Since 2012</div>
       <div>COPYRIGHT &#169; Orange Dolphin 2023</div>
     </div>
 </template>
@@ -47,11 +47,11 @@ export default {
   margin: 0 20px;
 }
 
-.fs-extra-large{
+.fs-small{
   font-size: $fs-xs;
 
   @include breakpoint(tablet){
-    font-size: $fs-xl;
+    font-size: $fs-s;
   }
 }
 </style>

@@ -73,19 +73,19 @@ export default {
     overflow-x: hidden;
 }
 .carouselContainer{
-    width:100vw;
-    height:70vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .slider {
+    width: 100%;
     height: 750px;
-    width:100vw;
     display: flex;
-    perspective: 1000px;
     position: relative;
-    align-items:center;
+    perspective: 1000px;
+    align-items: center;
 }
 .box1{      
     background:url('../assets/carousel/c1.jpg');
@@ -139,28 +139,28 @@ export default {
 }
 .slider [class*="box"]:nth-child(2),
 .slider [class*="box"]:nth-child(6) {
+    top: 20%;
+    z-index:2;
     width: 100vh;
     height: 60vh;
     transform: scale(0.4) translate(-50%,-50%);
-    top: 20%;
-    z-index:2;
 }
 .slider [class*="box"]:nth-child(3),
 .slider [class*="box"]:nth-child(5) {
+    top: 30%;
+    z-index:3;
     width: 100vh;
     height: 60vh;
     transform: scale(0.6) translate(-50%,-50%);
-    top: 30%;
-    z-index:3;
 }
 .slider [class*="box"]:nth-child(4) {
-    width: 60vw;
-    height: 60vh;
-    border-color: #c92026;
-    color: #fff;
-    transform: scale(1) translate(-50%,-50%);
     top: 50%;
     z-index:4;
+    width: 60vw;
+    height: 60vh;
+    color: #fff;
+    border-color: #c92026;
+    transform: scale(1) translate(-50%,-50%);
 }
 .slider [class*="box"]:nth-child(1){
     left:0%;

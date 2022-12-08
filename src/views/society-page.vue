@@ -46,15 +46,15 @@
       <!-- Partnerships (Mentoring) -->
       <h1 class="blue" data-aos="zoom-in-left">Partnerships (Mentoring)</h1>
       <div class="container">
-        <div class="row fs-medium">
+        <div class="row fs-small">
           <div class="col-lg-6 px-5">
-            <div class="fw-bold fs-large" data-aos="slide-down">GUANGYANG SECONDARY SCHOOL</div>
+            <div class="fw-bold fs-medium" data-aos="slide-down">GUANGYANG SECONDARY SCHOOL</div>
             <div class="" data-aos="slide-down">Learners for Today, Leaders for Tomorrow.</div>
             <div><img class="mt-5 img-fluid" data-aos="slide-up" src="@/assets/images/gyss.jpg" alt="gyss"></div>
           </div>
           <div class="col-lg-6 px-5">
               <img id="bendemeerSec" class="img-fluid" data-aos="slide-down" src="@/assets/images/bmss.jpg" alt="bmss">
-              <div class="fw-bold fs-large mt-5" data-aos="slide-down">BENDEMEER SECONDARY SCHOOL</div>
+              <div class="fw-bold fs-medium mt-5" data-aos="slide-down">BENDEMEER SECONDARY SCHOOL</div>
               <div class="" data-aos="slide-up">Active Learners, Responsible Citizens</div>
           </div>
         </div>
@@ -62,7 +62,7 @@
       <!-- Partnerships (Community Service) -->
       <h1 class="blue" data-aos="zoom-in-left">Partnerships (Community Service)</h1>
       <div class="container">
-        <div class="row fs-medium fw-bold">
+        <div class="row fs-small fw-bold">
           <div class="col-lg-4" v-for="community in communityServices" :key="community.name" :data-aos="community.animation">
             <div>{{community.name}}</div>
             <img class="csImages" :src="getImage1(community.path)" :alt="community.name"> 
@@ -167,7 +167,7 @@ export default{
   font-weight: bold;
 
   @include breakpoint(tablet){
-    font-size: 21px;
+    font-size: 16px;
   }
 
   .ydIcons{
@@ -190,33 +190,25 @@ export default{
 }
 
 .header{
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
 
   @include breakpoint(tablet){
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 
 .content{
-  font-size: 21px;
+  font-size: 16px;
   font-weight: 500;
 }
 
-.fs-large{
+.fs-medium{
   font-size: $fs-m;
-
-  @include breakpoint(tablet){
-    font-size: $fs-l;
-  }
 }
 
-.fs-medium{
+.fs-small{
   font-size: $fs-s;
-
-  @include breakpoint(tablet){
-    font-size: $fs-m;
-  }
 }
 
 //https://codepen.io/yemon/details/pWoROm
@@ -225,12 +217,8 @@ export default{
   bottom: 45%;
   color: #999;
   display: block;
-  font-size: $fs-xl;
+  font-size: $fs-m;
   font-weight: bold;
-
-  @include breakpoint(tablet){
-    font-size: $fs-xxl;
-  }
 }
 
 #flip {

@@ -28,12 +28,12 @@ $purple: hsl(271, 100%, 71%) !default;
 $red: hsl(348, 100%, 61%) !default; // Typography
 
 // Font-size
-$fs-xxl: 2.5rem; //fs-1
-$fs-xl: 2rem; //fs-2
-$fs-l: 1.75rem; //fs-3
-$fs-m: 1.5rem; //fs-4
-$fs-s: 1.25rem; //fs-5
-$fs-xs: 1rem; //fs-6
+$fs-xxl: 64px; //fs-1
+$fs-xl: 48px; //fs-2
+$fs-l: 40px; //fs-3
+$fs-m: 32px; //fs-4
+$fs-s: 20px; //fs-5
+$fs-xs: 16px; //fs-6
 
 // The container horizontal gap, which acts as the offset for breakpoints
 $gap: 32px !default; // 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16

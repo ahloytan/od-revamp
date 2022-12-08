@@ -1,6 +1,6 @@
 <template>
   <div id="education">
-      <div class="container fs-small">
+      <div class="container fs-xsmall">
           <div class="row">
               <h1 class="blue mt-5" data-aos="flip-up">What Do We Offer?</h1>
               <h5 class="text-muted">Hover to view more information!</h5>
@@ -25,7 +25,7 @@
         <div class="row">
           <h1 class="blue" data-aos="flip-up">Partnerships</h1>
           <div class="col-lg-4 mt-4" v-for="partnership in partnerships" :key="partnership.title" :data-aos="partnership.animation">
-            <div class="fw-bold fs-medium">{{partnership.title}}</div>
+            <div class="fw-bold fs-small">{{partnership.title}}</div>
             <img :src="getImage(partnership.path)" class="img-fluid" :alt="partnership.path">
           </div>
         </div>
@@ -64,20 +64,12 @@ export default{
   margin-top: 100px;
 }
 
-.fs-small{
+.fs-xsmall{
     font-size: $fs-xs;
-
-    @include breakpoint(tablet){
-        font-size: $fs-m;
-    }
 }
 
-.fs-medium{
+.fs-small{
   font-size: $fs-s;
-
-  @include breakpoint(tablet){
-    font-size: $fs-m;
-  }
 }
 
 //Card hover interactions

@@ -12,14 +12,14 @@
                     <template #content="slotProps">
                         <Card :data-aos="slotProps.item.animation" :data-aos-duration="animateSpeed">
                             <template #title>
-                                <span class="fs-large">{{slotProps.item.status}}</span>
+                                <span class="fs-small">{{slotProps.item.status}}</span>
                             </template>
                             <template #subtitle>
-                                <span class="fs-medium">{{slotProps.item.date}}</span>
+                                <span class="fs-small">{{slotProps.item.date}}</span>
                             </template>
                             <template #content>
                                 <img v-if="slotProps.item.image" :src="getImage(slotProps.item.image)" :alt="slotProps.item.name" class="timeline-img p-shadow-2" />
-                                <p class="mt-2 fs-small">{{slotProps.item.text}}</p>
+                                <p class="mt-2 fs-xsmall">{{slotProps.item.text}}</p>
                             </template>
                         </Card>
                     </template>
@@ -29,7 +29,7 @@
         </div>
         <div class="bg-light bg-gradient">
             <div class="container py-3">
-                <p v-for="(paragraph, index) in paragraphs" :key="index" class="text-start fs-small">{{paragraph}}</p>
+                <p v-for="(paragraph, index) in paragraphs" :key="index" class="text-start fs-xsmall">{{paragraph}}</p>
             </div>
         </div>
     </div>
@@ -85,29 +85,14 @@ export default {
     margin-top: 100px;
 }
 
-.fs-small{
+.fs-xsmall{
     font-size: $fs-xs;
-
-    @include breakpoint(tablet){
-        font-size: $fs-s;
-    }
 }
 
-.fs-medium{
+.fs-small{
   font-size: $fs-s;
-
-  @include breakpoint(tablet){
-    font-size: $fs-m;
-  }
 }
 
-.fs-large{
-  font-size: $fs-m;
-
-  @include breakpoint(tablet){
-    font-size: $fs-l;
-  }
-}
 .timeline-img{
     width: 200px;
 

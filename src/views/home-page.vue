@@ -3,14 +3,14 @@
         <div class="container" :data-aos-duration="animateSpeed">
             <div v-for="text in texts" :key="text.header" class="row mt-5 textHolder">
                 <h1 class="mvv" data-aos="fade-down" :data-aos-duration="animateSpeed">{{text.header}}</h1>
-                <div class="fs-small" :data-aos="text.animation" :data-aos-duration="animateSpeed" v-html="text.words"></div>
+                <div class="fs-xsmall" :data-aos="text.animation" :data-aos-duration="animateSpeed" v-html="text.words"></div>
             </div>
             <div class="row mt-5">
                 <h1 class="mvv" data-aos="fade-down">VALUES</h1>
                 <div data-aos="slide-right" :data-aos-duration="animateSpeed"> 
                     <span v-for="(value) in values" :key="value">
                         <span class="glow">{{value.charAt(0)}}</span>
-                        <span class="fs-small">{{value.substring(1, value.length)}}&nbsp;</span>
+                        <span class="fs-xsmall">{{value.substring(1, value.length)}}&nbsp;</span>
                     </span>
                 </div>
             </div>
@@ -53,25 +53,20 @@ export default {
     margin: 0 auto;
 }
 
-.fs-small{
+.fs-xsmall{
     font-size: $fs-xs;
-
-    @include breakpoint(tablet){
-        font-size: $fs-m;
-    }
 }
 
 .glow{
     color: $od-red;
     font-size: $fs-s;
-    margin-top: 45vh;
     animation-name: glow;
     animation-duration: 1s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 
     @include breakpoint(tablet){
-        font-size: $fs-xl;
+        font-size: $fs-l;
     }
 }
 
