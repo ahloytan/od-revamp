@@ -1,7 +1,7 @@
 <template>
     <div id="society">
       <!-- What We Do -->
-      <h1 class="blue mt-5" data-aos="zoom-in">What We Do</h1>
+      <h2 class="blue mt-5" data-aos="zoom-in">What We Do</h2>
       <div id="container">
           <div id="flip">
               <div><div>COMMUNITY SERVICE</div></div>
@@ -10,7 +10,7 @@
           </div>
       </div>
       <!-- How We Work-->
-      <h1 class="blue" data-aos="zoom-out">How We Work</h1>
+      <h2 class="blue" data-aos="zoom-out">How We Work</h2>
       <div id="mentoring" class="bg-light">
         <div class="container">
           <div class="row" >
@@ -44,7 +44,7 @@
         </div>
       </div>
       <!-- Partnerships (Mentoring) -->
-      <h1 class="blue" data-aos="zoom-in-left">Partnerships (Mentoring)</h1>
+      <h2 class="blue" data-aos="zoom-in-left">Partnerships (Mentoring)</h2>
       <div class="container">
         <div class="row fs-small">
           <div class="col-lg-6 px-5">
@@ -60,7 +60,7 @@
         </div>
       </div>
       <!-- Partnerships (Community Service) -->
-      <h1 class="blue" data-aos="zoom-in-left">Partnerships (Community Service)</h1>
+      <h2 class="blue" data-aos="zoom-in-left">Partnerships (Community Service)</h2>
       <div class="container">
         <div class="row fs-small fw-bold">
           <div class="col-lg-4" v-for="community in communityServices" :key="community.name" :data-aos="community.animation">
@@ -71,7 +71,7 @@
       </div>
 
       <!-- Youth Development-->
-      <h1 class="blue" data-aos="zoom-in-right">Youth Development</h1>
+      <h2 class="blue" data-aos="zoom-in-right">Youth Development</h2>
       <div class="bg-light">
         <div class="container">
           <div class="row">

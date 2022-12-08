@@ -2,7 +2,7 @@
   <div id="education">
       <div class="container fs-xsmall">
           <div class="row">
-              <h1 class="blue mt-5" data-aos="flip-up">What Do We Offer?</h1>
+              <h2 class="blue mt-5" data-aos="flip-up">What Do We Offer?</h2>
               <h5 class="text-muted">Hover to view more information!</h5>
               <main class="page-content">
                   <div class="card" v-for="card in cards" :key="card.title" :data-aos="card.animation">
@@ -15,7 +15,7 @@
               </main>
           </div>
           <div class="row">
-              <h1 class="blue" data-aos="flip-up">How We Work?</h1>
+              <h2 class="blue" data-aos="flip-up">How We Work?</h2>
               <div data-aos="slide-right">
                 In terms of working with school, we are a young company who currently based our program at Assumption English School. We are helping AES to manage their students at risk through 1) Mentoring 2) Doing workshops for the group which teach them values. We also provide youth worker to take care of their weekly cabin activities
               </div>
@@ -23,7 +23,7 @@
       </div>
       <div class="container-fluid">
         <div class="row">
-          <h1 class="blue" data-aos="flip-up">Partnerships</h1>
+          <h2 class="blue" data-aos="flip-up">Partnerships</h2>
           <div class="col-lg-4 mt-4" v-for="partnership in partnerships" :key="partnership.title" :data-aos="partnership.animation">
             <div class="fw-bold fs-small">{{partnership.title}}</div>
             <img :src="getImage(partnership.path)" class="img-fluid" :alt="partnership.path">

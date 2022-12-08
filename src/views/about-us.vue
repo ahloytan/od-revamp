@@ -2,7 +2,7 @@
     <div id="aboutUs">
         <div class="container">
             <div class="row">
-                <h1 class="blue mt-5" data-aos="flip-up" :data-aos-duration="animateSpeed">Timeline</h1>
+                <h2 class="blue mt-5" data-aos="flip-up">Timeline</h2>
                 <Timeline :value="events" align="alternate" class="customized-timeline">
                     <template #marker="slotProps">
                         <span class="custom-marker p-shadow-2" :style="{backgroundColor: slotProps.item.color}">
@@ -10,7 +10,7 @@
                         </span>
                     </template>
                     <template #content="slotProps">
-                        <Card :data-aos="slotProps.item.animation" :data-aos-duration="animateSpeed">
+                        <Card :data-aos="slotProps.item.animation">
                             <template #title>
                                 <span class="fs-small">{{slotProps.item.status}}</span>
                             </template>
@@ -24,7 +24,7 @@
                         </Card>
                     </template>
                 </Timeline>
-                <h1 class="blue" data-aos="flip-down" :data-aos-duration="animateSpeed">Orange Dolphin's Story</h1>
+                <h2 class="blue" data-aos="flip-down">Orange Dolphin's Story</h2>
             </div>
         </div>
         <div class="bg-light bg-gradient">
@@ -50,7 +50,6 @@ export default {
   },
   data() {
         return {
-            animateSpeed: 500,
             events: [
                 {status: 'Our First Volunteers', date: '15/10/2009', icon: 'pi pi-info-circle', color: '#9C27B0', image: '2009.jpg', animation: 'fade-down-right', text: 'Started with having a group of self-voluntary alumni that helps their junior on Saturdays at Bendemeer Secondary School (BDSS)'},
                 {status: 'Project Orange Dolphin', date: '15/10/2012', icon: 'pi pi-cog', color: '#673AB7', image: '2012.png', animation: 'fade-down-left', text: 'Officially form ourselves as a society with our first batch of Exco, named Project Orange Dolphin'},
