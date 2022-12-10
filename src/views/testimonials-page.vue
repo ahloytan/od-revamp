@@ -2,15 +2,15 @@
     <div id="testimonials">
 
         <div id="society-testimonials">
-            <h1 class="blue">Society Testimonials</h1>
+            <h1 class="blue" data-aos="zoom-out">Society Testimonials</h1>
             <div v-for="(info, key) in society" :key="key" class="testimonial-box d-flex row" >
-                    <div data-aos="slide-right" class="image-container col-4">
+                    <div data-aos="slide-right" class="image-container col-lg-4">
                         <div class="image-box">
                             <img :src="require('@/assets/testimonials/society/leona_chin.png')" :alt="info.name">
                         </div>
                     </div>
 
-                    <div data-aos="slide-left" class="text-container col-8">
+                    <div data-aos="slide-left" class="text-container col-lg-8">
                         <div class="text-box">
                             <span v-html="info.testimonial"></span>
                             <br><br>
@@ -21,15 +21,15 @@
         </div>
 
         <div id="education-testimonials">
-            <h1 class="blue">Education Testimonials</h1>
+            <h1 class="blue" data-aos="zoom-out">Education Testimonials</h1>
             <div v-for="(info, key) in education" :key="key" class="testimonial-box d-flex row" >
-                    <div data-aos="slide-right" class="image-container col-4 ">
+                    <div data-aos="slide-right" class="image-container col-lg-4 ">
                         <div class="image-box">
                             <img :src="require('@/assets/testimonials/society/leona_chin.png')" :alt="info.name">
                         </div>
                     </div>
 
-                    <div class="text-container col-8">
+                    <div class="text-container col-lg-8">
                         <div data-aos="slide-left" class="text-box">
                             <span v-html="info.testimonial"></span>
                             <br><br>
