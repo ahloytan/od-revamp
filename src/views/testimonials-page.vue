@@ -94,9 +94,9 @@ export default {
     mounted(){
     },
     methods:{
-        getImageEducation(path) {
-            return require("@/assets/testimonials/education/" + path);
-        }, 
+        // getImageEducation(path) {
+        //     return require("@/assets/testimonials/education/" + path);
+        // }, 
         getImageSociety(path){
             console.log("@/assets/testimonials/society/" + path)
             return require("@/assets/testimonials/society/" + path);
