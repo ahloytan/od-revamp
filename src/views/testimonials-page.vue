@@ -116,7 +116,6 @@ h1{
 }
 
 #society-testimonials {
-    margin-bottom:50px;
 
     .testimonial-box:nth-child(odd) {
 
