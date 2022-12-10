@@ -1,6 +1,6 @@
 <template>
     <div id="coaching-page">
-        <h1 class="blue" id="title">Coaching</h1>
+        <h1 class="blue" id="title" data-aos="zoom-out">Coaching</h1>
 
         <div class="row" id="content-box">
             <div data-aos="slide-right" class="col-6" id="image-box">
