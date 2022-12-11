@@ -2,11 +2,11 @@
     <div id="contactUs">
         <h1 id="title">{{title}}</h1>
 
-        <form id="contentBox">
+        <form id="contentBox" @submit.prevent="sendEmail">
 
             <div class="form-input" id="firstName">
                 <label for="first-name" class="form-label">First Name*</label>
-                <input v-model="userInput.firstName" type="text" class="form-control" id="first-name">
+                <input ref="firstName" v-model="userInput.firstName" type="text" class="form-control" id="first-name">
             </div>
 
             <div class="form-input" id="lastName">
@@ -39,7 +39,7 @@
             </div>
 
             <div class="form-input" id="comments">
-                <button @click="handleSubmit(interests, userInput)" type="button" class="btn btn-primary">Submit</button>
+                <button @click="sendEmail()" type="button" class="btn btn-primary">Submit</button>
             </div>
 
 
@@ -48,6 +48,8 @@
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
+
 export default {
     name: 'ContactUs', 
     components: {
@@ -67,6 +69,7 @@ export default {
                 lastName: "Hain", 
                 email: "arthurhain@gmail.com", 
                 comments: "Hello there kenobi.", 
+                selectedInterests:[]
             }
         }
     }, 
@@ -77,6 +80,21 @@ export default {
         handleSubmit(interests, userInput) {
             console.log(interests)
             console.log(userInput)
+        }, 
+        sendEmail() {
+            for (this.interest in this.interests){
+                if (this.interests[this.interest]) {
+                    this.userInput.selectedInterests.push(this.interest)
+                }
+            }
+
+            emailjs.send(
+                "service_zhxno5e","template_y28mc95", this.userInput, '61tCBexbBAaxeBnxf'
+            ).then((result) => {
+                    console.log('SUCCESS!', result.text);
+                }, (error) => {
+                    console.log('FAILED...', error.text);
+                });
         }
     }
 }

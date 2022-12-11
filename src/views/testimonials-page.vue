@@ -4,13 +4,13 @@
         <div id="society-testimonials">
             <h1 class="blue" data-aos="zoom-out">Society Testimonials</h1>
             <div v-for="(info, key) in society" :key="key" class="testimonial-box d-flex row" >
-                    <div data-aos="slide-right" class="image-container col-lg-4">
+                    <div data-aos="fade-down" class="image-container col-lg-4 col-md-12">
                         <div class="image-box">
                             <img :src="require('@/assets/testimonials/society/leona_chin.png')" :alt="info.name">
                         </div>
                     </div>
 
-                    <div data-aos="slide-left" class="text-container col-lg-8">
+                    <div  data-aos="fade-down" class="text-container col-lg-8 col-md-12">
                         <div class="text-box">
                             <span v-html="info.testimonial"></span>
                             <br><br>
@@ -23,14 +23,14 @@
         <div id="education-testimonials">
             <h1 class="blue" data-aos="zoom-out">Education Testimonials</h1>
             <div v-for="(info, key) in education" :key="key" class="testimonial-box d-flex row" >
-                    <div data-aos="slide-right" class="image-container col-lg-4 ">
+                    <div  data-aos="fade-down" class="image-container col-lg-4 col-md-12">
                         <div class="image-box">
                             <img :src="require('@/assets/testimonials/society/leona_chin.png')" :alt="info.name">
                         </div>
                     </div>
 
-                    <div class="text-container col-lg-8">
-                        <div data-aos="slide-left" class="text-box">
+                    <div class="text-container col-lg-8 col-md-12">
+                        <div  data-aos="fade-down" class="text-box">
                             <span v-html="info.testimonial"></span>
                             <br><br>
                             <p class="testimonial-name">- {{info.name}}</p>
@@ -67,7 +67,6 @@ export default {
                     testimonial: "Being in OD for almost 4 years, i think OD has been improving regardless of teaching methods or personal characters developing or others. It’s been a great journey for me to learn and grow as well. There’s a lot I’ve learned in OD, from values to personal characters. When i was a mentee, learning how to tackle qn like looking for keywords, thinking more in depth like .Being a student coaches now, i have to take up more responsibility and constantly learning skills that will help me in life or in school. I choose to stay because OD once helped me before when i was a mentee and i see great improvement in my science chemistry and also knowing that there are seniors who also being helped by OD too coming back to OD to help out so now I wanted to give back and help out whatever that i can It has great changes in my life because i choose to believe in OD and continue on. <br /><br /> When I was a mentee, knowing that OD can help me and that I constantly put in my best, in the end getting good results in my science. And now coming back OD to help out has given me a great opportunity to grow.", 
                     imagePath: ""
                 }
-                
             ], 
             education: [
                   {
@@ -140,40 +139,47 @@ h1{
     }
 } 
 
+.col-md-12 {
+    .image-container{
+        order: 1;
+        }
+
+    .text-container{
+        order: 2;
+        }
+}
+
 .testimonial-box{
-    min-height: 300px;
     width: 90%;
+    height: fit-content;
     margin:auto;
-    margin-top: 10px;
 }
 
 .image-box{
-    margin: 10px;
-    height: 90%;
+    height: 70%;
 
     img {
     height: 80%;
-    margin-top: auto;
-    // margin: auto;
-    // aspect-ratio: inherit;
-    // object-fit: contain;
+    margin: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
     border-radius: 50%;
+    border: 1px solid $black;
     }
 }
 
 .text-box{
-    margin: 10px;
-    height: 90%;
+    height: fit-content;
     text-align: left;
+    background: #fff;
+    border: 4px solid $od-red;
+    border-radius: 10px;
+    padding: 10px;
     
     .testimonial-name{
         color: $od-red;
     }
 
-    span, p {
-        position: relative;
-        top: 10%;
-    }
 }
 
 
