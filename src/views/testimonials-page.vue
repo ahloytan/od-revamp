@@ -139,16 +139,6 @@ h1{
     }
 } 
 
-.col-md-12 {
-    .image-container{
-        order: 1;
-        }
-
-    .text-container{
-        order: 2;
-        }
-}
-
 .testimonial-box{
     width: 90%;
     height: fit-content;
@@ -182,6 +172,21 @@ h1{
 
 }
 
+@media screen and (max-device-width: 990px) {
+    .testimonial-box{
 
+    .image-container{
+        order: 2;
+
+        .image-box{
+            position: relative;
+            top:20%;
+        }
+    }
+    .text-container{
+        order: 1;
+    }
+}
+}
 
 </style>
