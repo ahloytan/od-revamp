@@ -73,10 +73,13 @@ export default {
     margin: auto;
     
     #image-box{
-
         img {
             position: relative;
             top: 30%;
+            border-radius: 10%;
+            aspect-ratio: 1/1;
+            height: 40%;
+            object-fit: cover;
         }
     }
 
