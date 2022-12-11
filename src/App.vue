@@ -23,8 +23,7 @@ export default {
   color: #2c3e50;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: url("./assets/images/bgImage.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 100%;
   overflow-x: hidden;
 }
 
