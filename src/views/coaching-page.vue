@@ -3,11 +3,11 @@
         <h1 class="blue" id="title" data-aos="zoom-out">Coaching</h1>
 
         <div class="row" id="content-box">
-            <div data-aos="slide-right" class="col-6" id="image-box">
+            <div data-aos="slide-right" class="col-lg-6" id="image-box">
                 <img :src="require('@/assets/testimonials/society/leona_chin.png')" alt="">
             </div>
 
-            <div class="col-6" id="text-box">
+            <div class="col-lg-6" id="text-box">
                 <div data-aos="slide-left" id="joyful-educator">
                     <h2 class="blue">Joyful Educator</h2>
                     <p v-html="joyfulEducator.text1"></p>
@@ -73,12 +73,11 @@ export default {
     margin: auto;
     
     #image-box{
+        height: fit-content;
         img {
-            position: relative;
-            top: 30%;
             border-radius: 10%;
             aspect-ratio: 1/1;
-            height: 40%;
+            height: 50%;
             object-fit: cover;
         }
     }
