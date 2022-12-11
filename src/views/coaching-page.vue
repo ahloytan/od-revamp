@@ -10,22 +10,26 @@
             <div class="col-lg-6" id="text-box">
                 <div data-aos="slide-left" id="joyful-educator">
                     <h2 class="blue">Joyful Educator</h2>
-                    <p v-html="joyfulEducator.text1"></p>
-                    <div id="drive-link">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdf9dHHFT3abgQXC2A8OHrwQ15JyGLPCVOiaRS7dRAdGPvCiw/viewform?usp=sf_link">Place Your Orders Here!</a>    
+                    <div id="text">
+                        <p v-html="joyfulEducator.text1"></p>
+                        <div id="drive-link">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdf9dHHFT3abgQXC2A8OHrwQ15JyGLPCVOiaRS7dRAdGPvCiw/viewform?usp=sf_link">Place Your Orders Here!</a>    
+                        </div>
+                        <p v-html="joyfulEducator.text2"></p>
                     </div>
-                    <p v-html="joyfulEducator.text2"></p>
                 </div>
 
                 <div data-aos="slide-left" id="experience">
                     <h2 class="blue">Experiences</h2>
-                    <p>In terms of working with school, we are a young company who currently based our program at Assumption English School.</p>
-                    <p>We are helping AES to manage their students at risk through:</p>
-                    <ol>
-                        <li>Mentoring</li>
-                        <li>Doing workshops for the group which teach them values</li>
-                    </ol>
-                    <p>We also provide youth worker to take care of their weekly cabin activities</p>
+                    <div id="text">
+                        <p>In terms of working with school, we are a young company who currently based our program at Assumption English School.</p>
+                        <p>We are helping AES to manage their students at risk through:</p>
+                        <ol>
+                            <li>Mentoring</li>
+                            <li>Doing workshops for the group which teach them values</li>
+                        </ol>
+                        <p>We also provide youth worker to take care of their weekly cabin activities</p>
+                    </div>
                 </div>
 
             </div>
@@ -71,6 +75,14 @@ export default {
 
     width: 80%;
     margin: auto;
+
+    #text{
+        background: #fff;
+        border: 4px solid $od-red;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 10px;
+    }
     
     #image-box{
         height: fit-content;
@@ -95,7 +107,18 @@ export default {
         }
     }
     }
+}
 
+@media screen and (max-width: 990px) {
+        img {
+        border-radius: 10%;
+        aspect-ratio: 1/1;
+        width: 100%;
+    }
+
+    #joyful-educator, #experience {
+        margin-top:30px;
+    }
 
 }
 </style>
