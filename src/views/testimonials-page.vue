@@ -172,7 +172,7 @@ h1{
 
 }
 
-@media screen and (max-device-width: 990px) {
+@media screen and (max-width: 990px) {
     .testimonial-box{
 
     .image-container{
@@ -180,7 +180,7 @@ h1{
 
         .image-box{
             position: relative;
-            top:20%;
+            top:10%;
         }
     }
     .text-container{
