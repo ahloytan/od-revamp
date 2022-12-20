@@ -17,7 +17,7 @@
             <div class="col-lg-8" data-aos="slide-right"><img class="img-fluid h-100" src="@/assets/images/bendemeer-sec.jpg" alt="bendemeer sec image"></div>
             <div class="col-lg-1"></div>
             <div class="col-lg-3" data-aos="slide-left">
-              <div class="header">MENTORING</div>
+              <div class="header">MENTORING & COACHING</div>
               <hr/>
               <div class="content" v-for="content in contents" :key="content.icon" data-aos="slide-left">
                 <img class="list-items" :src="getImage(content.icon)" :alt="content.icon">

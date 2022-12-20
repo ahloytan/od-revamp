@@ -50,6 +50,13 @@ export default {
 #odIcon{
     width: 60px;
     height: 60px;
+    background-color: white;
+    border-radius: 5px;
+
+    @include breakpoint(desktop){
+        width: 80px;
+        height: 80px;
+    }
 }
 
 .active{
