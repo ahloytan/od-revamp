@@ -47,6 +47,15 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+
+.navbar {
+    background-color: #FFFFFF;
+
+    span {
+        color: #1B21C4;
+    }
+}
+
 #odIcon{
     width: 60px;
     height: 60px;
