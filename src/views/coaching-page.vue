@@ -1,34 +1,25 @@
 <template>
     <div id="coaching-page">
-        <h1 class="blue" id="title" data-aos="zoom-out">Coaching</h1>
+        <h2 class="blue" id="title" data-aos="zoom-out">Coaching</h2>
 
         <div class="row" id="content-box">
-            <div data-aos="slide-right" class="col-lg-6" id="image-box">
+            <div data-aos="slide-right" class="col-lg-6 row" id="image-box">
                 <img :src="require('@/assets/testimonials/society/leona_chin.png')" alt="">
+                <div>
+                    <h2 id="educator-name">Seah Fucai Jerry</h2>
+                    <span id="educator-role">Director & Founder</span>
+                </div>
             </div>
 
             <div class="col-lg-6" id="text-box">
                 <div data-aos="slide-left" id="joyful-educator">
-                    <h2 class="blue">Joyful Educator</h2>
+                    <h2 class="title">Joyful Educator</h2>
                     <div id="text">
                         <p v-html="joyfulEducator.text1"></p>
                         <div id="drive-link">
                             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdf9dHHFT3abgQXC2A8OHrwQ15JyGLPCVOiaRS7dRAdGPvCiw/viewform?usp=sf_link">Place Your Orders Here!</a>    
                         </div>
                         <p v-html="joyfulEducator.text2"></p>
-                    </div>
-                </div>
-
-                <div data-aos="slide-left" id="experience">
-                    <h2 class="blue">Experiences</h2>
-                    <div id="text">
-                        <p>In terms of working with school, we are a young company who currently based our program at Assumption English School.</p>
-                        <p>We are helping AES to manage their students at risk through:</p>
-                        <ol>
-                            <li>Mentoring</li>
-                            <li>Doing workshops for the group which teach them values</li>
-                        </ol>
-                        <p>We also provide youth worker to take care of their weekly cabin activities</p>
                     </div>
                 </div>
 
@@ -67,35 +58,51 @@ export default {
     color: $od-blue;
 }
 
+h2 {
+    font-size: 40px;
+}
+
 #title{
-    margin-bottom: 30px;
+    margin:50px 0px 0px 0px;
 }
 
 #content-box{
-
     width: 80%;
     margin: auto;
 
     #text{
-        background: #fff;
-        border: 4px solid $od-red;
-        border-radius: 10px;
-        padding: 10px;
         margin-top: 10px;
+        color: white;
     }
     
     #image-box{
-        height: fit-content;
+        // height: fit-content;
+        background-color: #FFFFFF;
+        display: flex;
         img {
-            border-radius: 10%;
+            margin: auto;
             aspect-ratio: 1/1;
-            height: 50%;
             object-fit: cover;
+        }
+
+        #educator-name {
+            color: #1B21C4;
+        }
+
+        #educator-role {
+            color: $od-red;
         }
     }
 
     #text-box{
+    padding: 50px;
     text-align: left;
+    background-color: #333333;
+
+
+    .title {
+        color: #48CCF4;
+    }
 
     #drive-link{
         text-align: center;
@@ -103,7 +110,7 @@ export default {
             text-decoration: inherit;
             color: $od-red;
             text-align: center;
-    
+            font-size: 20px;
         }
     }
     }
@@ -116,7 +123,7 @@ export default {
         width: 100%;
     }
 
-    #joyful-educator, #experience {
+    #joyful-educator {
         margin-top:30px;
     }
 
