@@ -26,22 +26,25 @@ export default {
   text-align: center;
   color: #2c3e50;
   /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  background: url("./assets/images/bgImage.png");
+  /* background: url("./assets/images/bgImage.png"); */
+  background:#f0f3f5;
   background-size: cover;
   background-repeat: no-repeat;
   overflow-x: hidden;
 }
 
-h1 {
+h1, h2 {
   font-family: 'League Spartan';
+  font-size: 34px;
   font-weight: bolder;
 }
 
-h2 {
+h3 {
   font-family: 'Kayak Sans', sans-serif;
+  font-weight: bold;
 }
 
-span,p {
+span,p, li {
   font-family: 'Kayak Sans', sans-serif;
   font-weight: lighter;
 }

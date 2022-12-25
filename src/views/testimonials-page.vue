@@ -2,19 +2,20 @@
     <div id="testimonials">
 
         <div id="society-testimonials">
-            <h1 class="blue" data-aos="zoom-out">Society Testimonials</h1>
-            <div v-for="(info, key) in society" :key="key" class="testimonial-box d-flex row" >
-                    <div data-aos="fade-down" class="image-container col-lg-4 col-md-12">
+            <h2 class="blue" data-aos="zoom-out">Society Testimonials</h2>
+            <div v-for="(info, key) in society" :key="key" class="testimonial-box d-flex row" data-aos="fade-down">
+                    <div class="image-container col-lg-4 col-md-12">
                         <div class="image-box">
                             <img :src="require('@/assets/testimonials/society/leona_chin.png')" :alt="info.name">
                         </div>
                     </div>
 
-                    <div  data-aos="fade-down" class="text-container col-lg-8 col-md-12">
+                    <div  class="text-container col-lg-8 col-md-12">
                         <div class="text-box">
+                            <div class="testimonial-name">
+                                <h2>{{info.name}}</h2>
+                            </div>
                             <span v-html="info.testimonial"></span>
-                            <br><br>
-                            <p class="testimonial-name">- {{info.name}}</p>
                         </div>
                     </div>
             </div>
@@ -22,18 +23,19 @@
 
         <div id="education-testimonials">
             <h1 class="blue" data-aos="zoom-out">Education Testimonials</h1>
-            <div v-for="(info, key) in education" :key="key" class="testimonial-box d-flex row" >
-                    <div  data-aos="fade-down" class="image-container col-lg-4 col-md-12">
+            <div v-for="(info, key) in education" :key="key" class="testimonial-box d-flex row" data-aos="fade-down">
+                    <div  class="image-container col-lg-4 col-md-12">
                         <div class="image-box">
                             <img :src="require('@/assets/testimonials/society/leona_chin.png')" :alt="info.name">
                         </div>
                     </div>
 
-                    <div class="text-container col-lg-8 col-md-12">
-                        <div  data-aos="fade-down" class="text-box">
+                    <div  class="text-container col-lg-8 col-md-12">
+                        <div class="text-box">
+                            <div class="testimonial-name">
+                                <h2>{{info.name}}</h2>
+                            </div>
                             <span v-html="info.testimonial"></span>
-                            <br><br>
-                            <p class="testimonial-name">- {{info.name}}</p>
                         </div>
                     </div>
             </div>
@@ -106,18 +108,25 @@ export default {
 
 </script>
 <style scoped lang="scss">
+
 .blue{
     color: $od-blue;
 }
 
-h1{
-    margin-bottom: 30px;
+h2 {
+    font-size: 40px;
 }
 
-#society-testimonials {
+
+#testimonials {
+    margin-top: 50px;
+}
+
+#society-testimonials, #education-testimonials {
+    margin-top: 20px;
 
     .testimonial-box:nth-child(odd) {
-
+        background-color: #FFFFFF;
         .image-container{
             order: 2;
         }
@@ -125,52 +134,43 @@ h1{
             order: 1;
         }
     }
+
+    .testimonial-box:nth-child(even){
+        background-color:#333333;
+        color:#FFFFFF;
+    }
 }
 
-#education-testimonials {
-    .testimonial-box:nth-child(odd) {
-
-        .image-container{
-            order: 2;
-        }
-        .text-container{
-            order: 1;
-        }
-    }
-} 
 
 .testimonial-box{
-    width: 90%;
     height: fit-content;
     margin:auto;
+    padding: 10px;
 }
 
 .image-box{
-    height: 70%;
 
     img {
-    height: 80%;
     margin: auto;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid $black;
+    aspect-ratio: 3/2;
+    object-fit:fill;
     }
 }
 
-.text-box{
-    height: fit-content;
-    text-align: left;
-    background: #fff;
-    border: 4px solid $od-red;
-    border-radius: 10px;
-    padding: 10px;
-    
-    .testimonial-name{
-        color: $od-red;
-    }
+.text-container {
+    display: flex;
+    .text-box{
+        margin: auto;
+        text-align: left;
+        padding: 10px;
 
+        .testimonial-name{
+            color: $od-red;
+        }
+
+    }
 }
+
 
 @media screen and (max-width: 990px) {
     .testimonial-box{

@@ -11,7 +11,7 @@
       </div>
       <!-- How We Work-->
       <h2 class="blue" data-aos="zoom-out">How We Work</h2>
-      <div id="mentoring" class="bg-light">
+      <div id="mentoring">
         <div class="container">
           <div class="row" >
             <div class="col-lg-8" data-aos="slide-right"><img class="img-fluid h-100" src="@/assets/images/bendemeer-sec.jpg" alt="bendemeer sec image"></div>
@@ -142,6 +142,7 @@ export default{
 }
 </script>
 <style scoped lang="scss">
+
 #bendemeerSec{
   height: auto;
 
@@ -150,8 +151,20 @@ export default{
   }
 }
 
+#mentoring {
+  background-color: #FFFFFF;
+
+  .header {
+    color: #1B21C4;
+  }
+}
+
 #communityService{
-  background-color: $apple-purple;
+  background-color:#333333;
+  
+  .header {
+    color: #48CCF4;
+  }
 }
 
 .csImages{
