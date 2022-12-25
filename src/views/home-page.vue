@@ -47,6 +47,10 @@ export default {
     color: $od-blue;
 }
 
+h2 {
+    font-size: 40px;
+}
+
 .textHolder{
     max-width: 875px;
     margin: 0 auto;

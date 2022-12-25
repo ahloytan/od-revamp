@@ -3,7 +3,7 @@
         <h2 class="blue" id="title" data-aos="zoom-out">Coaching</h2>
 
         <div class="row" id="content-box">
-            <div data-aos="slide-right" class="col-lg-6 row" id="image-box">
+            <div class="col-lg-6 row" id="image-box" data-aos="slide-right">
                 <img :src="require('@/assets/testimonials/society/leona_chin.png')" alt="">
                 <div>
                     <h2 id="educator-name">Seah Fucai Jerry</h2>
@@ -11,8 +11,8 @@
                 </div>
             </div>
 
-            <div class="col-lg-6" id="text-box">
-                <div data-aos="slide-left" id="joyful-educator">
+            <div class="col-lg-6" id="text-box" data-aos="slide-left">
+                <div id="joyful-educator">
                     <h2 class="title">Joyful Educator</h2>
                     <div id="text">
                         <p v-html="joyfulEducator.text1"></p>

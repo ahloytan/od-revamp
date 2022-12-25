@@ -143,6 +143,10 @@ export default{
 </script>
 <style scoped lang="scss">
 
+h2 {
+    font-size: 40px;
+}
+
 #bendemeerSec{
   height: auto;
 

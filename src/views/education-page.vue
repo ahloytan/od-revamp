@@ -64,6 +64,10 @@ export default{
   margin-top: 100px;
 }
 
+h2 {
+    font-size: 40px;
+}
+
 .fs-xsmall{
     font-size: $fs-xs;
 }

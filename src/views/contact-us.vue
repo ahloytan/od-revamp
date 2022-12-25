@@ -1,26 +1,26 @@
 <template>
     <div id="contactUs">
-        <h1 id="title">{{title}}</h1>
+        <h2 id="title">{{title}}</h2>
 
         <form id="contentBox" @submit.prevent="sendEmail">
 
             <div class="form-input" id="firstName">
-                <label for="first-name" class="form-label">First Name*</label>
+                <label for="first-name" class="form-label field-title">First Name*</label>
                 <input ref="firstName" v-model="userInput.firstName" type="text" class="form-control" id="first-name">
             </div>
 
             <div class="form-input" id="lastName">
-                <label for="last-name" class="form-label">Last Name*</label>
+                <label for="last-name" class="form-label field-title">Last Name*</label>
                 <input v-model="userInput.lastName" type="text" class="form-control" id="last-name">
             </div>
 
             <div class="form-input" id="email">
-                <label for="email-input" class="form-label">Email*</label>
+                <label for="email-input" class="form-label field-title">Email*</label>
                 <input v-model="userInput.email" type="text" class="form-control" id="email-input">
             </div>
 
             <div class="form-input" id="interest">
-                <label for="checkboxes" class="form-label">Interests</label>
+                <label for="checkboxes" class="form-label field-title">Interests</label>
 
                 <div v-for="(key, interest) in interests" :key="interest" id="checkboxes">
                     <div class="form-check">
@@ -34,7 +34,7 @@
             </div>
 
             <div class="form-input" id="comments">
-                    <label for="comments-input" class="form-label">Comments | Feedback | Suggestions</label>
+                    <label for="comments-input" class="form-labe field-title">Comments | Feedback | Suggestions</label>
                     <textarea v-model="userInput.comments" class="form-control" id="comments-input" rows="3"></textarea>
             </div>
 
@@ -100,18 +100,31 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+
+h2 {
+    font-size: 40px;
+}
+
+.field-title{
+    font-size: 20px;
+    color: $od-red;
+}
+
 #contactUs {
     height: 80%;
     width: 60%;
     text-align: center;
     margin: auto;
+    background-color: #FFFFFF;
+    padding-bottom: 20px;
 }
 
 #title {
     font-size:40px;
     color: #1528B9;
-    margin-top: 20px;
+    margin-top: 40px;
+    padding-top: 20px;
 }
 
 #contentBox{
