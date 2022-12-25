@@ -39,7 +39,7 @@ h1, h2 {
   font-weight: bolder;
 }
 
-h3 {
+h3, h4 {
   font-family: 'Kayak Sans', sans-serif;
   font-weight: bold;
 }

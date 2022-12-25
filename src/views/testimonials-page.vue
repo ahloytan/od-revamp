@@ -4,18 +4,31 @@
         <div id="society-testimonials">
             <h2 class="blue" data-aos="zoom-out">Society Testimonials</h2>
             <div v-for="(info, key) in society" :key="key" class="testimonial-box d-flex row" data-aos="fade-down">
-                    <div class="image-container col-lg-4 col-md-12">
+                    <div class="image-container col-lg-6 col-md-12">
                         <div class="image-box">
-                            <img :src="require('@/assets/testimonials/society/leona_chin.png')" :alt="info.name">
+                            <img :src="getImage1(info.imagePath)" :alt="info.name">
                         </div>
                     </div>
 
-                    <div  class="text-container col-lg-8 col-md-12">
+                    <div  class="text-container col-lg-6 col-md-12">
                         <div class="text-box">
                             <div class="testimonial-name">
                                 <h2>{{info.name}}</h2>
                             </div>
-                            <span v-html="info.testimonial"></span>
+                            <div class="q1">
+                                <h4 class="question">Why did you join OD?</h4>
+                                <span v-html="info.q1"></span>
+                            </div>
+                            <br>
+                            <div class="q2">
+                                <h4 class="question">What have you given to help in growing?</h4>
+                                <span v-html="info.q2"></span>
+                            </div>
+                            <br>
+                            <div class="q3">
+                                <h4 class="question">How has this journey in OD help you to grow?</h4>
+                                <span v-html="info.q3"></span>
+                            </div>
                         </div>
                     </div>
             </div>
@@ -24,18 +37,31 @@
         <div id="education-testimonials">
             <h1 class="blue" data-aos="zoom-out">Education Testimonials</h1>
             <div v-for="(info, key) in education" :key="key" class="testimonial-box d-flex row" data-aos="fade-down">
-                    <div  class="image-container col-lg-4 col-md-12">
+                    <div  class="image-container col-lg-6 col-md-12">
                         <div class="image-box">
-                            <img :src="require('@/assets/testimonials/society/leona_chin.png')" :alt="info.name">
+                            <img :src="getImage1(info.imagePath)" :alt="info.name">
                         </div>
                     </div>
 
-                    <div  class="text-container col-lg-8 col-md-12">
+                    <div  class="text-container col-lg-6 col-md-12">
                         <div class="text-box">
                             <div class="testimonial-name">
                                 <h2>{{info.name}}</h2>
                             </div>
-                            <span v-html="info.testimonial"></span>
+                            <div class="q1">
+                                <h4 class="question">Why did you join OD?</h4>
+                                <span v-html="info.q1"></span>
+                            </div>
+                            <br>
+                            <div class="q2">
+                                <h4 class="question">What have you given to help in growing?</h4>
+                                <span v-html="info.q2"></span>
+                            </div>
+                            <br>
+                            <div class="q3">
+                                <h4 class="question">How has this journey in OD help you to grow?</h4>
+                                <span v-html="info.q3"></span>
+                            </div>
                         </div>
                     </div>
             </div>
@@ -52,42 +78,54 @@ export default {
         return {
             society: [
                 {
-                    name: "Leona Chin",
+                    name: "Dexter Chua",
                     role: "Community Service",
-                    testimonial: "I was volunteering at a student care back in 2016 whereby I met my former school teacher, Mr Jerry Seah, in BDSS and that’s how I became a part of OD com service since then. I wasn’t a confident person back then, so during one of the projects, Mr Seah told me to take up the project lead. One most important thing that I've learned from Mr Seah during my journey with OD is, nothing is perfect, you will definitely make mistakes in life. Even without any experience, Mr Seah gave me the opportunity to learn and the chance to lead a team.<br /><br /> OD allows me to grow from a person who is not ready to take up any challenges, to become a person who’s anytime ready to take up a new challenge, which is a really big step for me. OD has given me a lot of opportunities to take up roles, to give so much more to the community, participating in home projects for the elderly, planning activities for the children and also guiding them in their studies. To be able to interact and help the elderly makes me understand a lot more about life. Being a part of OD also helped me to grow as a better person and gain positivity. Without the support from OD, Mr Seah, my schoolmates from BDSS and the com service team, I won’t be who I am today. So thank you to everyone of you who has guided me through this journey.<br /><br />I wish OD a happy 10th year anniversary! ", 
-                    imagePath: "leona_chin.png"
+                    q1: "I decided to join OD because I want to make a positive impact in the youth that I am mentoring.", 
+                    q2: "I guess my knowledge of life experience to the youth for them to understand that even though studies are important, it is not the most important thing in life.", 
+                    q3: "One of the key benefit/takeaway pointer is that OD focuses on growth not only to their clients but also their volunteers. Organising workshop and even pairing them up with mentors for their career goals and communication workshop to help one improve on their soft skills. That is the biggest takeaway because at the end of the day, what matters the most is soft skills when you interact with people. It happens on a daily basis and one need such skills regardless on where they are in life.",
+                    imagePath: "dexter_chua.jpeg"
                 },
                 {
-                    name: "Shawn, Seah En Hai",
-                    occupation: "", 
-                    testimonial: "OD is more than just an organisation to me. As a Chairperson in Committee Service, i hope that my fellow leader and i would be able to create a platform to give back to the society by Giving and Growing, No words is able to express that feeling when you have accomplise one com svc by one com svc and the smile you have given to the beneficary and eventually your volunteer too. Jerry ( founder of OD) and my group of committee has always been there for me whenever I’ve needed, they stood by me when i was at the lowest of my life, cheer me up when i was the lowest of my life and cover my job scope of area while waiting for me to get back on my knees. 2 years was the duration, it wasn’t easy for them esp to able to cover addition scope as everyone is busying with school/work.<br /><br />No matter what we called ourselves it really doesn’t matter, what matter is what really come out from your heart!", 
-                    imagePath: ""
+                    name: "Rachel Ong",
+                    role: "Community Service",
+                    q1: "I enjoy helping people and since I've got volunteer experience in helping the elderly and those primary school students and below, I wanted to try coaching the secondary school students.", 
+                    q2: "In terms of what I have contributed to the students, I would say my personal experience back when I was in secondary school, as well as certain life advice.", 
+                    q3: " I felt like having conversations with the students helped to better converse with my brother, who also happen to be sec 4 this year and just completed his o'levels as well. Being able to see things from the perspective of the GY students helped me relate better to my brother and be more patient when communicating with him.",
+                    imagePath: "rachel_ong.jpg"
                 }, 
                 {
-                    name: "Toh Si Min Jaclyn",
-                    occupation: "", 
-                    testimonial: "Being in OD for almost 4 years, i think OD has been improving regardless of teaching methods or personal characters developing or others. It’s been a great journey for me to learn and grow as well. There’s a lot I’ve learned in OD, from values to personal characters. When i was a mentee, learning how to tackle qn like looking for keywords, thinking more in depth like .Being a student coaches now, i have to take up more responsibility and constantly learning skills that will help me in life or in school. I choose to stay because OD once helped me before when i was a mentee and i see great improvement in my science chemistry and also knowing that there are seniors who also being helped by OD too coming back to OD to help out so now I wanted to give back and help out whatever that i can It has great changes in my life because i choose to believe in OD and continue on. <br /><br /> When I was a mentee, knowing that OD can help me and that I constantly put in my best, in the end getting good results in my science. And now coming back OD to help out has given me a great opportunity to grow.", 
-                    imagePath: ""
+                    name: "Constance",
+                    role: "Community Service",
+                    q1: "To help students who are struggling with their secondary school subjects by providing academic and non-academic advice. I saw OD as a nice initiative and platform for students like myself to help younger students do better in their education journey and have the courage to persevere even when they are not confident of their abilities.", 
+                    q2: "I've given advice and encouragement to the students in the OD mentoring program. Sometimes, just providing a listening ear to the students really goes a long way in providing support to them. :)",
+                    q3: "I believe that through the experience of mentoring a small group of students in their academics, it allows me to go beyond tapping on my academic knowledge to help them. The journey of mentoring them helped me to develop soft skills such as actively listening to their stories and worries that they may share with me.",
+                    imagePath: "constance.jpg"
                 }
             ], 
             education: [
                   {
-                    name: "Leona Chin",
+                    name: "Chua Sim Yee",
                     role: "Community Service",
-                    testimonial: "I was volunteering at a student care back in 2016 whereby I met my former school teacher, Mr Jerry Seah, in BDSS and that’s how I became a part of OD com service since then. I wasn’t a confident person back then, so during one of the projects, Mr Seah told me to take up the project lead. One most important thing that I've learned from Mr Seah during my journey with OD is, nothing is perfect, you will definitely make mistakes in life. Even without any experience, Mr Seah gave me the opportunity to learn and the chance to lead a team.<br /><br /> OD allows me to grow from a person who is not ready to take up any challenges, to become a person who’s anytime ready to take up a new challenge, which is a really big step for me. OD has given me a lot of opportunities to take up roles, to give so much more to the community, participating in home projects for the elderly, planning activities for the children and also guiding them in their studies. To be able to interact and help the elderly makes me understand a lot more about life. Being a part of OD also helped me to grow as a better person and gain positivity. Without the support from OD, Mr Seah, my schoolmates from BDSS and the com service team, I won’t be who I am today. So thank you to everyone of you who has guided me through this journey.<br /><br />I wish OD a happy 10th year anniversary! ", 
-                    imagePath: "leona_chin.png"
+                    q1: "I joined OD as I thought that the mentoring programme is very meaningful. It provides me with an opportunity to support and encourage young individuals to maximize their potential, develop their skills and become the person they want to be.", 
+                    q2: "I have shared useful study tips and knowledge gained through my experiences with my mentees. Furthermore, I have helped my mentees in setting realistic goals and have guided them in achieving these goals along the way.", 
+                    q3: "It allows me to enhance my practical skills required in the working world. For example, leadership, problem solving skills and communication skills are developed as I mentored my mentees. In addition, it helps me to better manage relationships with different backgrounds and personalities.",
+                    imagePath: "chua_sim_yee.jpg"
                 },
                 {
-                    name: "Shawn, Seah En Hai",
-                    occupation: "", 
-                    testimonial: "OD is more than just an organisation to me. As a Chairperson in Committee Service, i hope that my fellow leader and i would be able to create a platform to give back to the society by Giving and Growing, No words is able to express that feeling when you have accomplise one com svc by one com svc and the smile you have given to the beneficary and eventually your volunteer too. Jerry ( founder of OD) and my group of committee has always been there for me whenever I’ve needed, they stood by me when i was at the lowest of my life, cheer me up when i was the lowest of my life and cover my job scope of area while waiting for me to get back on my knees. 2 years was the duration, it wasn’t easy for them esp to able to cover addition scope as everyone is busying with school/work.<br /><br />No matter what we called ourselves it really doesn’t matter, what matter is what really come out from your heart!", 
-                    imagePath: ""
+                    name: "Rayvaithi Alagappan",
+                    role: "Community Service",
+                    q1: "OD has influenced my confidence in Academic subjects that I wasn't good in. The support I received from my peers and Mr Seah has shaped my view in how I view challenges. That allowed me to jump my grades from F9 to B3 within 6 months. So I'm still in the organization to proof that one need not have to be best in all subjects or challenges we face. When we try we discover our true path to our potential.", 
+                    q2: "My experience and creative knowledge in executing brand collaterals and marketing materials(Offline/ Online).", 
+                    q3: "OD has allowed me to pursue my dream in the creative path. Today I'm building a startup (Answered.sg) that not only supports educators in translating their teaching materials effectively online; but also be valued and accessed by the public for their relentless hard work.",
+                    imagePath: "Rayvaithi_Alagappan.jpeg"
                 }, 
                 {
-                    name: "Toh Si Min Jaclyn",
-                    occupation: "", 
-                    testimonial: "Being in OD for almost 4 years, i think OD has been improving regardless of teaching methods or personal characters developing or others. It’s been a great journey for me to learn and grow as well. There’s a lot I’ve learned in OD, from values to personal characters. When i was a mentee, learning how to tackle qn like looking for keywords, thinking more in depth like .Being a student coaches now, i have to take up more responsibility and constantly learning skills that will help me in life or in school. I choose to stay because OD once helped me before when i was a mentee and i see great improvement in my science chemistry and also knowing that there are seniors who also being helped by OD too coming back to OD to help out so now I wanted to give back and help out whatever that i can It has great changes in my life because i choose to believe in OD and continue on. <br /><br /> When I was a mentee, knowing that OD can help me and that I constantly put in my best, in the end getting good results in my science. And now coming back OD to help out has given me a great opportunity to grow.", 
-                    imagePath: ""
+                    name: "Dennis Chew",
+                    role: "Community Service",
+                    q1: "To participate in the growth and development of youths in Singapore", 
+                    q2: "Time but lesser lately. It's a joy to interact with youths and still a joy catching up with them and old friends.", 
+                    q3: "Finding the little pockets of joy in mentoring youths and seeing them develop into young adults. We all need friends and mentors around to help us to grow and learn sometimes.",
+                    imagePath: "dennis_chew.jpg"
                 }
             ]
         }
@@ -95,14 +133,9 @@ export default {
     mounted(){
     },
     methods:{
-        // getImageEducation(path) {
-        //     return require("@/assets/testimonials/education/" + path);
-        // }, 
-        getImageSociety(path){
-            console.log("@/assets/testimonials/society/" + path)
-            return require("@/assets/testimonials/society/" + path);
-        }
-
+    getImage1(imagePath) {
+        return require("@/assets/images/" + imagePath);
+    }
     },
 }
 
@@ -132,28 +165,39 @@ h2 {
         }
         .text-container{
             order: 1;
+
+        .question {
+            color: #1B21C4;
+        }
+
         }
     }
 
     .testimonial-box:nth-child(even){
         background-color:#333333;
         color:#FFFFFF;
+
+        .question {
+            color: #48CCF4;
+        }
     }
 }
 
 
 .testimonial-box{
-    height: fit-content;
+    // height: fit-content;
+    min-height: 200px;
     margin:auto;
-    padding: 10px;
 }
 
 .image-box{
-
     img {
-    margin: auto;
-    aspect-ratio: 3/2;
-    object-fit:fill;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        object-position: right top;
     }
 }
 
@@ -167,7 +211,6 @@ h2 {
         .testimonial-name{
             color: $od-red;
         }
-
     }
 }
 
