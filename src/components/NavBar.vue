@@ -49,11 +49,11 @@ export default {
 <style scoped lang="scss">
 
 .navbar {
-    background-color: #333333;
+    background-color: #FFFFFF;
     position: sticky;
 
     span {
-        color: #FFFFFF;
+        color: #333333;
     }
 
     span:hover {
