@@ -220,10 +220,11 @@ h2 {
 
     .image-container{
         order: 2;
+        padding-left: 0px;
+        padding-right: 0px;
 
         .image-box{
-            position: relative;
-            top:10%;
+            padding-bottom: 10px;
         }
     }
     .text-container{
