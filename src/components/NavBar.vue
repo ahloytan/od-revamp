@@ -49,11 +49,16 @@ export default {
 <style scoped lang="scss">
 
 .navbar {
-    background-color: #FFFFFF;
+    background-color: #333333;
+    position: sticky;
 
     span {
-        color: #1B21C4;
+        color: #FFFFFF;
     }
+
+    span:hover {
+        color: $od-red;
+        }
 }
 
 #odIcon{
