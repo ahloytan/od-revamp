@@ -38,7 +38,7 @@
                     <textarea v-model="userInput.comments" class="form-control" id="comments-input" rows="3"></textarea>
             </div>
 
-            <div class="form-input" id="comments">
+            <div class="form-input" id="submit-button">
                 <button @click="sendEmail()" type="button" class="btn btn-primary">Submit</button>
             </div>
 
@@ -146,5 +146,21 @@ h2 {
     background-color: #7879F1;
     position: relative;
     left: 45%;
+}
+
+@media screen and (max-width: 990px) {
+    #contactUs {
+        width: 100%;
+    }
+
+    #submit-button{
+        display: flex;
+        justify-content: center;
+
+        .btn-primary{
+            position: relative;
+            left: 0%;
+        }
+    }
 }
 </style>
