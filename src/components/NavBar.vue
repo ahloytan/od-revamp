@@ -2,7 +2,7 @@
     <div id="homePage">
         <nav class="navbar navbar-expand-lg">
             <div class="container ">
-                <img id="odIcon" src="@/assets/images/orangeDolphin.png" alt="Orange Dolphin Icon" >
+                <img id="odIcon" src="@/assets/images/orangeDolphin.png" alt="Orange Dolphin Icon" @click="active = '/'; $router.push('/')">
                 <!-- Sandwich menu on mobile -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -66,6 +66,7 @@ export default {
     height: 60px;
     background-color: white;
     border-radius: 5px;
+    cursor: pointer;
 
     @include breakpoint(desktop){
         width: 80px;
