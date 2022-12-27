@@ -80,8 +80,8 @@ h3, h4 {
   font-family: 'KayakSans Regular'
 }
 
-span,p, li {
-  font-family: "KayakSans Light";
+span,p, li, .span {
+  font-family: "KayakSans Regular";
 }
 
 </style>
