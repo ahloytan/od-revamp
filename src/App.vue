@@ -1,5 +1,4 @@
 <template>
-  <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
   <NavBar></NavBar>
   <router-view></router-view>
   <Footer></Footer>
@@ -19,9 +18,48 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.cdnfonts.com/css/kayak-sans');
-/* @import url('https://fonts.googleapis.com/css?family=League%20Spartan'); */
 
+@font-face {
+  font-family: "KayakSans Regular";
+  src: local("KayakSans Regular"), 
+  url("~@/assets/fonts/KayakSans/Kayak Sans Regular.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "KayakSans Bold";
+  src: local("KayakSans Bold"), 
+  url("~@/assets/fonts/KayakSans/Kayak Sans Bold.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "KayakSans Light";
+  src: local("KayakSans Light"), 
+  url("~@/assets/fonts/KayakSans/Kayak Sans Light.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "LeagueSpartan Regular";
+  src: local("LeagueSpartan Regular"), 
+  url("~@/assets/fonts/LeagueSpartan/LeagueSpartan-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "LeagueSpartan Light";
+  src: local("LeagueSpartan Light"), 
+  url("~@/assets/fonts/LeagueSpartan/LeagueSpartan-Thin.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "LeagueSpartan Bold";
+  src: local("LeagueSpartan Bold"), 
+  url("~@/assets/fonts/LeagueSpartan/LeagueSpartan-Bold.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "LeagueSpartan Medium";
+  src: local("LeagueSpartan Medium"), 
+  url("~@/assets/fonts/LeagueSpartan/LeagueSpartan-Medium.ttf") format('truetype');
+}
 #app {
   text-align: center;
   color: #2c3e50;
@@ -34,19 +72,16 @@ export default {
 }
 
 h1, h2 {
-  font-family: 'League Spartan';
+  font-family: 'LeagueSpartan Medium';
   font-size: 34px;
-  font-weight: bolder;
 }
 
 h3, h4 {
-  font-family: 'Kayak Sans', sans-serif;
-  font-weight: bold;
+  font-family: 'KayakSans Regular'
 }
 
 span,p, li {
-  font-family: 'Kayak Sans', sans-serif;
-  font-weight: lighter;
+  font-family: "KayakSans Light";
 }
 
 </style>
