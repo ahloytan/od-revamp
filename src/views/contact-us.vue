@@ -65,10 +65,10 @@ export default {
                 "Partnership": false
             }, 
             userInput: {
-                firstName: "Arthur", 
-                lastName: "Hain", 
-                email: "arthurhain@gmail.com", 
-                comments: "Hello there kenobi.", 
+                firstName: "", 
+                lastName: "", 
+                email: "", 
+                comments: "", 
                 selectedInterests:[]
             }
         }
