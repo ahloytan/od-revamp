@@ -117,15 +117,33 @@ h2 {
 }
 
 @media screen and (max-width: 990px) {
-        img {
-        border-radius: 10%;
-        aspect-ratio: 1/1;
+    #content-box {
         width: 100%;
+
+        #image-box{
+            padding: 0px 0px 30px 0px;
+            margin: 0px;
+
+            #educator-name{
+                margin:0px;
+                padding: 20px 0px 0px 0px;
+            }
+            img {
+                aspect-ratio: 1/1;
+                width: 100%;
+                padding: 0px;
+            }
+        }
+        
+        #text-box {
+            padding: 20px;
+        }
     }
 
     #joyful-educator {
         margin-top:30px;
     }
+
 
 }
 </style>
