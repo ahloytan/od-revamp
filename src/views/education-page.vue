@@ -2,7 +2,7 @@
   <div id="education">
       <div class="container fs-xsmall">
           <div class="row">
-              <h2 class="blue mt-5" data-aos="flip-up">What Do We Offer?</h2>
+              <h2 class="blue mt-5" data-aos="flip-up">What We Offer?</h2>
               <h5 class="text-muted">Hover to view more information!</h5>
               <main class="page-content">
                   <div class="card" v-for="card in cards" :key="card.title" :data-aos="card.animation">

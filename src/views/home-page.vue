@@ -7,7 +7,7 @@
             </div>
             <div class="row mt-5">
                 <h2 class="mvv" data-aos="fade-down">VALUES</h2>
-                <div data-aos="slide-right"> 
+                <div> 
                     <span v-for="(value) in values" :key="value">
                         <span class="glow">{{value.charAt(0)}}</span>
                         <span class="fs-xsmall">{{value.substring(1, value.length)}}&nbsp;</span>

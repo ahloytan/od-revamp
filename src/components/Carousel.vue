@@ -1,12 +1,12 @@
 <template>
     <div id="mainCarousel">
         <!-- https://codepen.io/PedalsUp/pen/ZErypwK -->
-        <div v-if="isDesktop" class="carouselContainer">
+        <!-- <div v-if="isDesktop" class="carouselContainer">
             <div class="slider">
                 <div v-for="(image, index) in images" :key="index" :class="('box' + (index + startIndex))"></div>
             </div>
-        </div>
-        <div v-else class="container">
+        </div> -->
+        <div class="container">
             <div id="carouselExampleDark" class="carousel carousel-dark slide mt-5" data-bs-ride="carousel" data-bs-interval="3000">
                 <div class="carousel-indicators">
                     <button :id="'btn' + image" v-for="(image, index) in images" :key="image+index" type="button" class="" data-bs-target="#carouselExampleDark" :data-bs-slide-to="index" aria-current="true" :aria-label="'Slide' + index "></button>
@@ -37,18 +37,19 @@ export default {
         return {
             timer: null,
             startIndex: 1,
-            isDesktop: null,
+            // isDesktop: null,
             images: ['c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7'],
         }
     },  
     mounted(){
-        if (window.innerWidth < 990){ 
-            this.isDesktop = false; 
+        // if (window.innerWidth < 990){ 
+            // this.isDesktop = false; 
             $('#c1, #btnc1').addClass('active');
-        } else {
-            this.isDesktop = true;
-            this.timer = setInterval(() => { this.rotate(); }, 3500);
-        }
+        // } else {
+            // this.isDesktop = true;
+            // this.timer = setInterval(() => { this.rotate(); }, 3500);
+        // }
+
     },
     methods:{
         rotate() {

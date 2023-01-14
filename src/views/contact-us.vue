@@ -91,10 +91,12 @@ export default {
             emailjs.send(
                 "service_zhxno5e","template_y28mc95", this.userInput, '61tCBexbBAaxeBnxf'
             ).then((result) => {
-                    console.log('SUCCESS!', result.text);
-                }, (error) => {
-                    console.log('FAILED...', error.text);
-                });
+                console.log('SUCCESS!', result.text);
+                alert("Your email has been successfully sent!");
+            }, (error) => {
+                console.log('FAILED...', error.text);
+                alert("Oh no, something went wrong, please contact the team");
+            });
         }
     }
 }

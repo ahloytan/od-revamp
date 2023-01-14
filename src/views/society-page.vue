@@ -53,9 +53,9 @@
             <div><img class="mt-5 img-fluid" data-aos="slide-up" src="@/assets/images/gyss.jpg" alt="gyss"></div>
           </div>
           <div class="col-lg-6 px-5">
-              <img id="bendemeerSec" class="img-fluid" data-aos="slide-down" src="@/assets/images/bmss.jpg" alt="bmss">
-              <div class="fw-bold fs-medium mt-5" data-aos="slide-down">BENDEMEER SECONDARY SCHOOL</div>
-              <div class="" data-aos="slide-up">Active Learners, Responsible Citizens</div>
+            <div class="fw-bold fs-medium" data-aos="slide-down">BENDEMEER SECONDARY SCHOOL</div>
+            <div class="" data-aos="slide-down">Active Learners, Responsible Citizens</div>
+            <img id="bendemeerSec" class="mt-5 img-fluid" data-aos="slide-up" src="@/assets/images/bmss.jpg" alt="bmss">
           </div>
         </div>
       </div>

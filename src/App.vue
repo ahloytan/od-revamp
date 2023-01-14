@@ -62,7 +62,7 @@ export default {
 }
 #app {
   text-align: center;
-  color: #2c3e50;
+  /* color: #2c3e50; */
   /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
   /* background: url("./assets/images/bgImage.png"); */
   background:#f0f3f5;
