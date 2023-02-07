@@ -49,6 +49,11 @@
 
 <script>
 import emailjs from '@emailjs/browser';
+import {createToaster} from '@meforma/vue-toaster';
+
+const Toaster = createToaster({
+    position: "top",
+});
 
 export default {
     name: 'ContactUs', 
@@ -92,11 +97,21 @@ export default {
                 "service_zhxno5e","template_y28mc95", this.userInput, '61tCBexbBAaxeBnxf'
             ).then((result) => {
                 console.log('SUCCESS!', result.text);
-                alert("Your email has been successfully sent!");
+                // alert("Your email has been successfully sent!");
+                this.positiveToast()
             }, (error) => {
                 console.log('FAILED...', error.text);
                 alert("Oh no, something went wrong, please contact the team");
             });
+        }, 
+
+        positiveToast() {
+            Toaster.success(`Confirmation email sent!`);
+            setTimeout(Toaster.clear, 3000)
+        }, 
+        negativeToast() {
+            Toaster.error(`Oops. Something went wrong! Please try again later.`)
+            setTimeout(Toaster.clear, 3000)
         }
     }
 }
