@@ -87,6 +87,12 @@ export default {
             console.log(userInput)
         }, 
         sendEmail() {
+            console.log("Interests here:", this.interests)
+            console.log("userInput here:", this.userInput)
+            if (this.userInput['firstName'] == "" || this.userInput['lastName'] == ""  || this.userInput['email'] == "" || this.userInput['comments'] == "" ){
+                this.emptyInputToast()
+                return 'Error';
+            }
             for (this.interest in this.interests){
                 if (this.interests[this.interest]) {
                     this.userInput.selectedInterests.push(this.interest)
@@ -97,7 +103,6 @@ export default {
                 "service_zhxno5e","template_y28mc95", this.userInput, '61tCBexbBAaxeBnxf'
             ).then((result) => {
                 console.log('SUCCESS!', result.text);
-                // alert("Your email has been successfully sent!");
                 this.positiveToast()
             }, (error) => {
                 console.log('FAILED...', error.text);
@@ -106,11 +111,15 @@ export default {
         }, 
 
         positiveToast() {
-            Toaster.success(`Confirmation email sent!`);
+            Toaster.success(`Your request has been sent to our team!`);
             setTimeout(Toaster.clear, 3000)
         }, 
         negativeToast() {
             Toaster.error(`Oops. Something went wrong! Please try again later.`)
+            setTimeout(Toaster.clear, 3000)
+        }, 
+        emptyInputToast() {
+            Toaster.error(`Oops. There seems to missing information. Please ensure that all fields have been filled.`)
             setTimeout(Toaster.clear, 3000)
         }
     }
