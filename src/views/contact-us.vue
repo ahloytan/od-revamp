@@ -101,7 +101,7 @@ export default {
                 this.positiveToast()
             }, (error) => {
                 console.log('FAILED...', error.text);
-                alert("Oh no, something went wrong, please contact the team");
+                this.negativeToast()
             });
         }, 
 
