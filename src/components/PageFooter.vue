@@ -14,7 +14,7 @@ export default {
     return {
       links: [
         {href: "https://www.facebook.com/OrangeDolphinSG/", path: "facebook.png"},
-        {href: "https://www.instagram.com/ahloytan/?hl=en", path: "instagram.png"},
+        {href: "https://www.instagram.com/orangedolphinsg/", path: "instagram.png"},
         {href: "https://sg.linkedin.com/in/jerry-seah-86518281", path: "linkedin.png"}
       ]
     }
