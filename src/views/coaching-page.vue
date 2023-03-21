@@ -4,7 +4,7 @@
 
         <div class="row" id="content-box">
             <div class="col-lg-6 row" id="image-box" data-aos="slide-right">
-                <img :src="require('@/assets/testimonials/society/leona_chin.png')" alt="">
+                <img :src="require('@/assets/testimonials/society/mr_seah.jpg')" alt="mr_seah">
                 <div>
                     <h2 id="educator-name">Seah Fucai Jerry</h2>
                     <span id="educator-role">Director & Founder</span>
@@ -76,13 +76,12 @@ h2 {
     }
     
     #image-box{
-        // height: fit-content;
+        height: fit-content;
         background-color: #FFFFFF;
         display: flex;
+        padding-left: 0px;
         img {
-            margin: auto;
-            aspect-ratio: 1/1;
-            object-fit: cover;
+            padding: 0px;
         }
 
         #educator-name {
@@ -127,11 +126,6 @@ h2 {
             #educator-name{
                 margin:0px;
                 padding: 20px 0px 0px 0px;
-            }
-            img {
-                aspect-ratio: 1/1;
-                width: 100%;
-                padding: 0px;
             }
         }
         
