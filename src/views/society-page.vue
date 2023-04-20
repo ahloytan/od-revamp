@@ -14,7 +14,7 @@
       <div id="mentoring">
         <div class="container">
           <div class="row" >
-            <div class="col-lg-8" data-aos="slide-right"><img class="img-fluid h-100" src="@/assets/images/bendemeer-sec.jpg" alt="bendemeer sec image"></div>
+            <div class="col-lg-8" data-aos="slide-right"><img class="img-fluid societyImg" src="@/assets/images/bendemeer-sec.jpg" alt="bendemeer sec image"></div>
             <div class="col-lg-1"></div>
             <div class="col-lg-3" data-aos="slide-left">
               <div class="header">MENTORING & COACHING</div>
@@ -27,7 +27,7 @@
           </div>
         </div>
       </div>
-      <div id="communityService" class="my-5 text-white">
+      <div id="communityService" class="py-5 text-white">
         <div class="container">
           <div class="row" >
             <div class="col-lg-3" data-aos="slide-right">
@@ -39,7 +39,7 @@
               </div>
             </div>
             <div class="col-lg-1"></div>
-            <div class="col-lg-8" data-aos="slide-left"><img class="img-fluid h-100" src="@/assets/carousel/c2.jpg" alt="bendemeer sec image"></div>
+            <div class="col-lg-8" data-aos="slide-left"><img class="img-fluid societyImg" src="@/assets/carousel/c2.jpg" alt="care corner image"></div>
           </div>
         </div>
       </div>
@@ -76,13 +76,13 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-8 d-flex">
-              <div class="col-lg-6">
+              <div class="col-6">
                 <div data-aos="fade-up-right" :class="'yd ' + yd1.bgColor" v-for="yd1 in youthDevelopment1" :key="yd1.title">
                   <img class="list-items ydIcons" :src="getImage2(yd1.path)" :alt="yd1.path"> &nbsp;
                   <span>{{yd1.title}}</span>
                 </div>
               </div>
-              <div class="col-lg-6">
+              <div class="col-6">
                 <div data-aos="fade-up-left" :class="'yd ' + yd2.bgColor" v-for="yd2 in youthDevelopment2" :key="yd2.title">
                   <span>{{yd2.title}}</span> &nbsp;
                   <img class="list-items ydIcons" :src="getImage2(yd2.path)" :alt="yd2.path">
@@ -90,7 +90,7 @@
               </div>
             </div>
             <div class="col-lg-4 d-flex align-items-center">
-              <div class="header" data-aos="slide-left">MINDFULNESS/ COACHING</div>
+              <div id="mindfulness" class="header" data-aos="slide-left">MINDFULNESS/ COACHING</div>
             </div>
           </div>
         </div>
@@ -147,6 +147,14 @@ h2 {
     font-size: 40px;
 }
 
+#mindfulness{
+  display: none;
+
+  @include breakpoint(desktop){
+    display: block;
+  } 
+}
+
 #bendemeerSec{
   height: auto;
 
@@ -174,6 +182,13 @@ h2 {
 .csImages{
   width: 100%;
   height: 75%;
+}
+
+.societyImg{
+  height: auto;
+  @include breakpoint(tablet){
+    height: 100%;
+  }
 }
 
 .yd{
