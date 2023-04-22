@@ -10,11 +10,11 @@
           </div>
       </div>
       <!-- How We Work-->
-      <h2 class="blue" data-aos="zoom-out">How We Work</h2>
+      <h2 class="blue" :data-aos="!isMobile() ? 'zoom-out': 'none'">How We Work</h2>
       <div id="mentoring">
         <div class="container">
           <div class="row" >
-            <div class="col-lg-8" data-aos="slide-right"><img class="img-fluid societyImg" src="@/assets/images/bendemeer-sec.jpg" alt="bendemeer sec image"></div>
+            <div class="col-lg-8" :data-aos="!isMobile() ? 'slide-right': 'none'"><img class="img-fluid societyImg" src="@/assets/images/bendemeer-sec.jpg" alt="bendemeer sec image"></div>
             <div class="col-lg-1"></div>
             <div class="col-lg-3" data-aos="slide-left">
               <div class="header">MENTORING & COACHING</div>
@@ -83,7 +83,7 @@
                 </div>
               </div>
               <div class="col-6">
-                <div data-aos="fade-up-left" :class="'yd ' + yd2.bgColor" v-for="yd2 in youthDevelopment2" :key="yd2.title">
+                <div data-aos="fade-up-left" class="yd bg-info" v-for="yd2 in youthDevelopment2" :key="yd2.title">
                   <span>{{yd2.title}}</span> &nbsp;
                   <img class="list-items ydIcons" :src="getImage2(yd2.path)" :alt="yd2.path">
                 </div>
@@ -127,6 +127,7 @@ export default{
     }
   },
   mounted(){
+
   },
   methods:{
     getImage(imagePath) {
@@ -138,6 +139,9 @@ export default{
     getImage2(imagePath) {
         return require("@/assets/youth-development/" + imagePath + ".png");
     },
+    isMobile() {
+      return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ?  true : false;
+    }
   }
 }
 </script>
