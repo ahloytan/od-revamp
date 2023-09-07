@@ -2,7 +2,7 @@
     <div id="testimonials">
 
         <div id="society-testimonials">
-            <h2 class="blue" data-aos="zoom-out">Society Testimonials</h2>
+            <!-- <h2 class="blue" data-aos="zoom-out">Society Testimonials</h2> -->
             <div v-for="(info, key) in society" :key="key" class="testimonial-box d-flex row" data-aos="fade-down">
                     <div class="image-container col-lg-6 col-md-12">
                         <div class="image-box">
@@ -35,7 +35,7 @@
         </div>
 
         <div id="education-testimonials">
-            <h1 class="blue" data-aos="zoom-out">Education Testimonials</h1>
+            <!-- <h1 class="blue" data-aos="zoom-out">Education Testimonials</h1> -->
             <div v-for="(info, key) in education" :key="key" class="testimonial-box d-flex row" data-aos="fade-down">
                     <div  class="image-container col-lg-6 col-md-12">
                         <div class="image-box">
@@ -43,7 +43,7 @@
                         </div>
                     </div>
 
-                    <div  class="text-container col-lg-6 col-md-12">
+                    <div class="text-container col-lg-6 col-md-12">
                         <div class="text-box">
                             <div class="testimonial-name">
                                 <h2>{{info.name}}</h2>
@@ -150,42 +150,37 @@ h2 {
     font-size: 40px;
 }
 
-
-#testimonials {
-    margin-top: 50px;
+.question {
+    color: #1B21C4;
 }
 
-#society-testimonials, #education-testimonials {
-    margin-top: 20px;
-
+#society-testimonials {
+    background-color: #FFFFFF;
     .testimonial-box:nth-child(odd) {
-        background-color: #FFFFFF;
+        .image-container{
+            order: 2;
+        }
+        .text-container{
+            order: 1;
+        }
+    }
+}
+
+#education-testimonials {
+    background-color: #FFFFFF;
+    .testimonial-box:nth-child(even) {
         .image-container{
             order: 2;
         }
         .text-container{
             order: 1;
 
-        .question {
-            color: #1B21C4;
-        }
-
-        }
-    }
-
-    .testimonial-box:nth-child(even){
-        background-color:#333333;
-        color:#FFFFFF;
-
-        .question {
-            color: #48CCF4;
         }
     }
 }
 
 
 .testimonial-box{
-    // height: fit-content;
     min-height: 200px;
     margin:auto;
 }

@@ -24,14 +24,14 @@
                         </Card>
                     </template>
                 </Timeline>
-                <h2 class="blue" data-aos="flip-down">Orange Dolphin's Story</h2>
+                <!-- <h2 class="blue" data-aos="flip-down">Orange Dolphin's Story</h2> -->
             </div>
         </div>
-        <div class="bg-light bg-gradient">
+        <!-- <div class="bg-light bg-gradient">
             <div class="container py-3">
                 <p v-for="(paragraph, index) in paragraphs" :key="index" class="text-start fs-xsmall">{{paragraph}}</p>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 <script>
@@ -51,13 +51,13 @@ export default {
   data() {
         return {
             events: [
-                {status: 'Our First Volunteers', date: '15/10/2009', icon: 'pi pi-info-circle', color: '#9C27B0', image: '2009.jpg', animation: 'fade-down-right', text: 'Started with having a group of self-voluntary alumni that helps their junior on Saturdays at Bendemeer Secondary School (BDSS)'},
-                {status: 'Project Orange Dolphin', date: '15/10/2012', icon: 'pi pi-cog', color: '#673AB7', image: '2012.png', animation: 'fade-down-left', text: 'Officially form ourselves as a society with our first batch of Exco, named Project Orange Dolphin'},
-                {status: 'Partnership With GYSS', date: '15/10/2013', icon: 'pi pi-heart', color: '#FF9800', image: '2013.png', animation: 'fade-down-right', text: 'Expanded to Guangyang Secondary School (GYSS), exploring on organising other community service projects'},
-                {status: 'We Are Registered', date: '16/10/2017', icon: 'pi pi-id-card', color: '#607D8B', image: '2017.png', animation: 'fade-down-left', text: 'Officially registered as a society with Registry of Society (ROS). Ended our service with BDSS after 8 years.'},
-                {status: 'Partnership With BSS', date: '15/10/2018', icon: 'pi pi-megaphone', color: '#673AB7', image: '2018.png', animation: 'fade-down-left', text: 'Outreached to Beatty Secondary School and started Mindfulnessjourney by conducting mindfulness workshops'},
-                {status: 'Partnership With SMU', date: '15/10/2021', icon: 'pi pi-search-plus', color: '#FF9800', image: 'gyss.png', animation: 'fade-down-right', text: 'Started our 1st partnership with SMU'},
-                {status: 'Celebrating Our 10th Year Anniversary', date: '16/10/2022', icon: 'pi pi-thumbs-up', color: '#607D8B', image: '2022.png', animation: 'fade-down-left', text: 'Here we are! Celebrating our 10th year anniversary'},
+                {status: 'Celebrating Our 10th Year Anniversary', date: 'September 2022', icon: 'pi pi-thumbs-up', color: '#607D8B', image: '2022.png', animation: 'fade-down-left', text: 'Here we are! Celebrating our 10th year anniversary'},
+                {status: 'Partnership With SMU', date: 'September 2021', icon: 'pi pi-search-plus', color: '#FF9800', image: 'gyss.png', animation: 'fade-down-right', text: 'Started our 1st partnership with SMU'},
+                {status: 'Partnership With BSS', date: 'September 2018', icon: 'pi pi-megaphone', color: '#673AB7', image: '2018.png', animation: 'fade-down-left', text: 'Outreached to Beatty Secondary School and started Mindfulnessjourney by conducting mindfulness workshops'},
+                {status: 'We Are Registered', date: 'September 2017', icon: 'pi pi-id-card', color: '#607D8B', image: '2017.png', animation: 'fade-down-left', text: 'Officially registered as a society with Registry of Society (ROS). Ended our service with BDSS after 8 years.'},
+                {status: 'Partnership With GYSS', date: 'September 2013', icon: 'pi pi-heart', color: '#FF9800', image: '2013.png', animation: 'fade-down-right', text: 'Expanded to Guangyang Secondary School (GYSS), exploring on organising other community service projects'},
+                {status: 'Project Orange Dolphin', date: 'September 2012', icon: 'pi pi-cog', color: '#673AB7', image: '2012.png', animation: 'fade-down-left', text: 'Officially form ourselves as a society with our first batch of Exco, named Project Orange Dolphin'},
+                {status: 'Our First Volunteers', date: 'September 2009', icon: 'pi pi-info-circle', color: '#9C27B0', image: '2009.jpg', animation: 'fade-down-right', text: 'Started with having a group of self-voluntary alumni that helps their junior on Saturdays at Bendemeer Secondary School (BDSS)'},
             ],
             paragraphs: [
                 "There once was a dolphin who was injured.",

@@ -44,13 +44,14 @@
         </div>
       </div>
       <!-- Partnerships (Mentoring) -->
-      <h2 class="blue" data-aos="zoom-in-left">Partnerships (Mentoring)</h2>
+      <h2 class="blue" data-aos="zoom-in-left">Schools & Partnership</h2>
       <div class="container">
         <div class="row fs-small">
           <div class="col-lg-6 px-5">
             <div class="fw-bold fs-medium" data-aos="slide-down">GUANGYANG SECONDARY SCHOOL</div>
             <div class="" data-aos="slide-down">Learners for Today, Leaders for Tomorrow.</div>
             <div><img class="mt-5 img-fluid" data-aos="slide-up" src="@/assets/images/gyss.jpg" alt="gyss"></div>
+
           </div>
           <div class="col-lg-6 px-5">
             <div class="fw-bold fs-medium" data-aos="slide-down">BENDEMEER SECONDARY SCHOOL</div>
@@ -59,8 +60,8 @@
           </div>
         </div>
       </div>
-      <!-- Partnerships (Community Service) -->
-      <h2 class="blue" data-aos="zoom-in-left">Partnerships (Community Service)</h2>
+      <!-- Community Service -->
+      <h2 class="blue" data-aos="zoom-in-left">Community Service</h2>
       <div class="container">
         <div class="row fs-small fw-bold">
           <div class="col-lg-4" v-for="community in communityServices" :key="community.name" :data-aos="community.animation">
@@ -71,7 +72,7 @@
       </div>
 
       <!-- Youth Development-->
-      <h2 class="blue" data-aos="zoom-in-right">Youth Development</h2>
+      <h2 class="blue" data-aos="zoom-in-right">Development for Volunteer</h2>
       <div class="bg-light">
         <div class="container">
           <div class="row">
@@ -84,13 +85,13 @@
               </div>
               <div class="col-6">
                 <div data-aos="fade-up-left" class="yd bg-info" v-for="yd2 in youthDevelopment2" :key="yd2.title">
+                  <img class="list-items ydIcons" :src="getImage2(yd2.path)" :alt="yd2.path"> &nbsp;
                   <span>{{yd2.title}}</span> &nbsp;
-                  <img class="list-items ydIcons" :src="getImage2(yd2.path)" :alt="yd2.path">
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 d-flex align-items-center">
-              <div id="mindfulness" class="header" data-aos="slide-left">MINDFULNESS/ COACHING</div>
+            <div class="col-lg-4 d-flex align-items-center justify-content-center">
+              <div id="mindfulness" class="header" data-aos="slide-left">MINDFULNESS</div>
             </div>
           </div>
         </div>
@@ -117,7 +118,7 @@ export default{
       youthDevelopment1: [
         {title: "Adult Mentoring", path: "mentoring", bgColor: "bg-warning"},
         {title: "Profiling (DISC + MBTI)", path: "profiling", bgColor: "bg-warning"},
-        {title: "Consultations from Experts", path: "consultations", bgColor: "bg-warning"}
+        {title: "Coaching Sessions", path: "consultations", bgColor: "bg-warning"}
       ],
       youthDevelopment2: [
         {title: "Crafting CV", path: "crafting-cv", bgColor: "bg-info"},
@@ -177,7 +178,6 @@ h2 {
 
 #communityService{
   background-color:#333333;
-  
   .header {
     color: #48CCF4;
   }

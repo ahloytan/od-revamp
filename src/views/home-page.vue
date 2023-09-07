@@ -2,11 +2,11 @@
     <div id="homePage">
         <div class="container">
             <div v-for="text in texts" :key="text.header" class="row mt-5 textHolder">
-                <h2 class="mvv" data-aos="fade-down">{{text.header}}</h2>
+                <h3 class="mvv" data-aos="fade-down">{{text.header}}</h3>
                 <div class="fs-xsmall span" :data-aos="text.animation" v-html="text.words"></div>
             </div>
             <div class="row mt-5">
-                <h2 class="mvv" data-aos="fade-down">VALUES</h2>
+                <h3 class="mvv" data-aos="fade-down">VALUES</h3>
                 <div> 
                     <span v-for="(value) in values" :key="value">
                         <span class="glow">{{value.charAt(0)}}</span>
@@ -57,7 +57,7 @@ h2 {
 }
 
 .fs-xsmall{
-    font-size: $fs-xs;
+    font-size: 22px;
 }
 
 .glow{

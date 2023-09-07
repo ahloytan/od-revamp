@@ -30,7 +30,7 @@ export default {
             {path: '/', name: 'Home'}, 
             {path: 'about-us', name: 'About Us'}, 
             {path: 'society-page', name: 'Society'}, 
-            {path: 'education-page', name: 'Education'}, 
+            // {path: 'education-page', name: 'Education'}, 
             {path: 'testimonials-page', name: 'Testimonials'}, 
             {path: 'coaching-page', name: 'Coaching'}, 
             {path: 'contact-us', name: 'Contact Us'}
@@ -69,8 +69,8 @@ export default {
     cursor: pointer;
 
     @include breakpoint(desktop){
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 }
 
